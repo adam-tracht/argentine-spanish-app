@@ -1,0 +1,452 @@
+[
+  {
+    "title": "Meeting someone at a bar",
+    "description": "First conversation with someone you find attractive at a bar",
+    "category": "dating",
+    "difficulty": "intermediate",
+    "tags": ["bar", "flirt", "first_meeting"],
+    "dialog": [
+      {
+        "speaker": "you",
+        "spanish": "Hola, ¿cómo andás?",
+        "english": "Hi, how are you?"
+      },
+      {
+        "speaker": "other",
+        "spanish": "Bien, gracias. ¿Y vos?",
+        "english": "Good, thanks. And you?"
+      },
+      {
+        "speaker": "you",
+        "spanish": "Todo bien. ¿Venís seguido acá?",
+        "english": "All good. Do you come here often?",
+        "options": [
+          "¿Te puedo invitar algo? (Can I buy you a drink?)",
+          "Me encanta este lugar (I love this place)",
+          "Es mi primera vez acá (It's my first time here)"
+        ]
+      },
+      {
+        "speaker": "other",
+        "spanish": "Sí, es mi bar favorito. ¿Vos sos de acá?",
+        "english": "Yeah, it's my favorite bar. Are you from here?"
+      },
+      {
+        "speaker": "you",
+        "spanish": "No, soy yankee. Vine a conocer Buenos Aires.",
+        "english": "No, I'm American. I came to get to know Buenos Aires.",
+        "options": [
+          "¿Qué me recomendás hacer? (What do you recommend I do?)",
+          "Recién llegué hace una semana (I just arrived a week ago)",
+          "Me encanta la ciudad (I love the city)"
+        ]
+      },
+      {
+        "speaker": "other",
+        "spanish": "¡Qué copado! Hay mucho para hacer acá.",
+        "english": "How cool! There's a lot to do here."
+      },
+      {
+        "speaker": "you",
+        "spanish": "Sos re copada. ¿Me pasás tu insta?",
+        "english": "You're really cool. Can you give me your Instagram?",
+        "options": [
+          "¿Querés salir algún día? (Want to go out sometime?)",
+          "¿Puedo pedirte el número? (Can I get your number?)",
+          "Me caés re bien (I really like you)"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Making weekend plans",
+    "description": "Suggesting activities for the weekend with someone you're interested in",
+    "category": "dating",
+    "difficulty": "beginner",
+    "tags": ["plans", "invitation", "weekend"],
+    "dialog": [
+      {
+        "speaker": "you",
+        "spanish": "Che, ¿qué vas a hacer este finde?",
+        "english": "Hey, what are you doing this weekend?"
+      },
+      {
+        "speaker": "other",
+        "spanish": "No tengo muchos planes todavía. ¿Por?",
+        "english": "I don't have many plans yet. Why?"
+      },
+      {
+        "speaker": "you",
+        "spanish": "¿Querés ir a tomar algo?",
+        "english": "Want to go for a drink?",
+        "options": [
+          "¿Qué te parece si vamos a la playa? (What do you think if we go to the beach?)",
+          "Espero que encontremos una joda (I hope we find a party)",
+          "Podemos hacer la previa en mi casa (We can do previa at my place)"
+        ]
+      },
+      {
+        "speaker": "other",
+        "spanish": "¡Dale! Me encanta la idea.",
+        "english": "Sure! I love the idea."
+      },
+      {
+        "speaker": "you",
+        "spanish": "Genial. ¿El sábado a la tardecita?",
+        "english": "Great. Saturday early evening?",
+        "options": [
+          "Te escribo para coordinar (I'll text you to coordinate)",
+          "¿Dónde preferís ir? (Where do you prefer to go?)",
+          "Conozco un bar re copado (I know a really cool bar)"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "After a good date",
+    "description": "Following up after a successful first date",
+    "category": "dating",
+    "difficulty": "intermediate",
+    "tags": ["followup", "interest", "texting"],
+    "dialog": [
+      {
+        "speaker": "you",
+        "spanish": "La pasé re bien anoche.",
+        "english": "I had a really good time last night."
+      },
+      {
+        "speaker": "other",
+        "spanish": "Yo también. Fue re copado charlar con vos.",
+        "english": "Me too. It was really cool chatting with you."
+      },
+      {
+        "speaker": "you",
+        "spanish": "Me encantaría verte de nuevo.",
+        "english": "I'd love to see you again.",
+        "options": [
+          "¿Querés hacer algo esta semana? (Want to do something this week?)",
+          "Tenés buena onda (You have good vibes)",
+          "Me caés re bien (I really like you)"
+        ]
+      },
+      {
+        "speaker": "other",
+        "spanish": "¡Sí! ¿Cuándo estás libre?",
+        "english": "Yes! When are you free?"
+      },
+      {
+        "speaker": "you",
+        "spanish": "Estoy libre el jueves o viernes.",
+        "english": "I'm free Thursday or Friday.",
+        "options": [
+          "¿Qué te parece el jueves? (What do you think about Thursday?)",
+          "Vos elegí el día (You choose the day)",
+          "El viernes podemos ir a los boliches (Friday we can go to the clubs)"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Asking for directions",
+    "description": "Getting help finding a location in Buenos Aires",
+    "category": "directions",
+    "difficulty": "beginner",
+    "tags": ["navigation", "polite", "practical"],
+    "dialog": [
+      {
+        "speaker": "you",
+        "spanish": "Disculpe, ¿dónde queda la estación de subte más cercana?",
+        "english": "Excuse me, where is the nearest subway station?"
+      },
+      {
+        "speaker": "other",
+        "spanish": "Andá recto tres cuadras y doblá a la izquierda.",
+        "english": "Go straight three blocks and turn left."
+      },
+      {
+        "speaker": "you",
+        "spanish": "¿Y después?",
+        "english": "And then?",
+        "options": [
+          "¿Está lejos? (Is it far?)",
+          "Muchas gracias (Thank you very much)",
+          "¿Cuántas cuadras son? (How many blocks is it?)"
+        ]
+      },
+      {
+        "speaker": "other",
+        "spanish": "Cruzás la avenida y está a la vuelta de la esquina.",
+        "english": "Cross the avenue and it's around the corner."
+      },
+      {
+        "speaker": "you",
+        "spanish": "Perfecto, muchas gracias.",
+        "english": "Perfect, thank you very much."
+      }
+    ]
+  },
+  {
+    "title": "Ordering drinks at a bar",
+    "description": "Ordering for yourself and asking what someone else wants",
+    "category": "social",
+    "difficulty": "beginner",
+    "tags": ["bar", "ordering", "drinks"],
+    "dialog": [
+      {
+        "speaker": "you",
+        "spanish": "¿Qué querés tomar?",
+        "english": "What do you want to drink?"
+      },
+      {
+        "speaker": "other",
+        "spanish": "No sé, ¿qué me recomendás?",
+        "english": "I don't know, what do you recommend?"
+      },
+      {
+        "speaker": "you",
+        "spanish": "El fernet con coca es re típico de acá.",
+        "english": "Fernet with coke is really typical from here.",
+        "options": [
+          "También tienen buena birra (They also have good beer)",
+          "Yo voy a tomar una chela (I'm going to have a beer)",
+          "Podemos pedir vino (We can order wine)"
+        ]
+      },
+      {
+        "speaker": "other",
+        "spanish": "Dale, probemos el fernet entonces.",
+        "english": "Sure, let's try the fernet then."
+      },
+      {
+        "speaker": "you",
+        "spanish": "Dos fernets con coca, por favor.",
+        "english": "Two fernets with coke, please.",
+        "options": [
+          "Invito yo (It's on me)",
+          "¿Dividimos? (Should we split it?)",
+          "Después pedimos algo más (We'll order more later)"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Talking about your background",
+    "description": "Explaining who you are and what you do",
+    "category": "social",
+    "difficulty": "intermediate",
+    "tags": ["small_talk", "personal", "work"],
+    "dialog": [
+      {
+        "speaker": "other",
+        "spanish": "¿De dónde sos?",
+        "english": "Where are you from?"
+      },
+      {
+        "speaker": "you",
+        "spanish": "Soy de Estados Unidos.",
+        "english": "I'm from the United States.",
+        "options": [
+          "Soy yankee (I'm American)",
+          "Vine hace un mes (I came a month ago)",
+          "Estoy de visita (I'm visiting)"
+        ]
+      },
+      {
+        "speaker": "other",
+        "spanish": "¿Y a qué te dedicás?",
+        "english": "And what do you do?"
+      },
+      {
+        "speaker": "you",
+        "spanish": "Trabajo desde casa como programador.",
+        "english": "I work from home as a programmer.",
+        "options": [
+          "Laburo en tecnología (I work in tech)",
+          "Estoy trabajando remoto desde acá (I'm working remotely from here)",
+          "¿Vos de qué laburás? (What do you do for work?)"
+        ]
+      },
+      {
+        "speaker": "other",
+        "spanish": "¡Qué copado! Yo estudio diseño.",
+        "english": "How cool! I study design."
+      },
+      {
+        "speaker": "you",
+        "spanish": "¿En qué barrio vivís?",
+        "english": "What neighborhood do you live in?",
+        "options": [
+          "Yo vivo en Palermo (I live in Palermo)",
+          "¿Está bueno tu barrio? (Is your neighborhood good?)",
+          "¿Vivís cerca de acá? (Do you live near here?)"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Suggesting to continue the night",
+    "description": "Keeping the night going after drinks",
+    "category": "dating",
+    "difficulty": "intermediate",
+    "tags": ["nightlife", "continuation", "bold"],
+    "dialog": [
+      {
+        "speaker": "you",
+        "spanish": "La estoy pasando re bien.",
+        "english": "I'm having a really good time."
+      },
+      {
+        "speaker": "other",
+        "spanish": "Yo también. Este bar está copado.",
+        "english": "Me too. This bar is cool."
+      },
+      {
+        "speaker": "you",
+        "spanish": "¿Querés ir a otro lado?",
+        "english": "Want to go somewhere else?",
+        "options": [
+          "Conozco un boliche cerca (I know a club nearby)",
+          "Podemos ir a tomar algo a mi casa (We can go have a drink at my place)",
+          "¿Vamos a caminar un toque? (Should we go walk a bit?)"
+        ]
+      },
+      {
+        "speaker": "other",
+        "spanish": "Dale, ¿qué tenés en mente?",
+        "english": "Sure, what do you have in mind?"
+      },
+      {
+        "speaker": "you",
+        "spanish": "Hay un lugar tranquilo a unas cuadras de acá.",
+        "english": "There's a quiet place a few blocks from here.",
+        "options": [
+          "O podemos seguir charlando en mi pieza (Or we can keep chatting at my room)",
+          "Hay una joda buena cerca (There's a good party nearby)",
+          "Vamos donde vos quieras (Let's go wherever you want)"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Declining politely",
+    "description": "Saying no to an invitation without being rude",
+    "category": "social",
+    "difficulty": "intermediate",
+    "tags": ["decline", "polite", "boundaries"],
+    "dialog": [
+      {
+        "speaker": "other",
+        "spanish": "¿Querés venir a mi casa?",
+        "english": "Want to come to my place?"
+      },
+      {
+        "speaker": "you",
+        "spanish": "Disculpame, pero me tengo que ir.",
+        "english": "Sorry, but I have to go.",
+        "options": [
+          "La pasé re bien igual (I had a really good time though)",
+          "Capaz otro día (Maybe another day)",
+          "Tengo que levantarme temprano (I have to wake up early)"
+        ]
+      },
+      {
+        "speaker": "other",
+        "spanish": "No pasa nada, entiendo.",
+        "english": "No problem, I understand."
+      },
+      {
+        "speaker": "you",
+        "spanish": "Pero me encantaría verte de nuevo.",
+        "english": "But I'd love to see you again.",
+        "options": [
+          "¿Te escribo mañana? (Can I text you tomorrow?)",
+          "¿Hacemos algo esta semana? (Should we do something this week?)",
+          "Me caés re bien (I really like you)"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Talking about nightlife preferences",
+    "description": "Discussing what you like to do when going out",
+    "category": "social",
+    "difficulty": "intermediate",
+    "tags": ["nightlife", "preferences", "personality"],
+    "dialog": [
+      {
+        "speaker": "other",
+        "spanish": "¿Te gustan los boliches?",
+        "english": "Do you like nightclubs?"
+      },
+      {
+        "speaker": "you",
+        "spanish": "Prefiero ir a bares o fiestas en casas.",
+        "english": "I prefer to go to bars or house parties.",
+        "options": [
+          "Los boliches son re al pedo (Clubs are really pointless)",
+          "Me gusta más charlar en bares (I like chatting in bars more)",
+          "¿Vos qué preferís? (What do you prefer?)"
+        ]
+      },
+      {
+        "speaker": "other",
+        "spanish": "Yo también. Es más tranquilo para charlar.",
+        "english": "Me too. It's calmer for chatting."
+      },
+      {
+        "speaker": "you",
+        "spanish": "Sí, mal. En los boliches no podés ni escuchar.",
+        "english": "Yeah, exactly. In clubs you can't even hear.",
+        "options": [
+          "Prefiero la previa que el boliche (I prefer previa over clubs)",
+          "Me copa más un bar copado (I prefer a cool bar more)",
+          "¿Salís mucho? (Do you go out a lot?)"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Complimenting someone",
+    "description": "Giving genuine compliments in a casual way",
+    "category": "dating",
+    "difficulty": "beginner",
+    "tags": ["compliment", "flirt", "positive"],
+    "dialog": [
+      {
+        "speaker": "you",
+        "spanish": "Tenés buena onda.",
+        "english": "You have good vibes."
+      },
+      {
+        "speaker": "other",
+        "spanish": "Gracias, vos también.",
+        "english": "Thanks, you too."
+      },
+      {
+        "speaker": "you",
+        "spanish": "Sos re copada. Me caés re bien.",
+        "english": "You're really cool. I really like you.",
+        "options": [
+          "Sos re linda (You're really pretty)",
+          "Me encanta charlar con vos (I love chatting with you)",
+          "Sos un grossa (You're awesome/a legend)"
+        ]
+      },
+      {
+        "speaker": "other",
+        "spanish": "Qué lindo, gracias.",
+        "english": "How nice, thank you."
+      },
+      {
+        "speaker": "you",
+        "spanish": "Es la posta. No es chamuyo.",
+        "english": "It's the truth. It's not BS.",
+        "options": [
+          "En serio, la estoy pasando re bien (Seriously, I'm having a really good time)",
+          "Me gustás (I like you)",
+          "Sos re interesante (You're really interesting)"
+        ]
+      }
+    ]
+  }
+]

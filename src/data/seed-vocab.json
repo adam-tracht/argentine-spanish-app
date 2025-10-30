@@ -1,0 +1,467 @@
+[
+  {
+    "spanish": "plaza",
+    "english": "park",
+    "category": "other",
+    "difficulty": "beginner",
+    "tags": ["places", "common"],
+    "context": "Not 'parque' in Argentina"
+  },
+  {
+    "spanish": "pieza",
+    "english": "room",
+    "category": "other",
+    "difficulty": "beginner",
+    "tags": ["places", "home"],
+    "context": "Not 'cuarto' in Argentina"
+  },
+  {
+    "spanish": "feria",
+    "english": "market",
+    "category": "other",
+    "difficulty": "beginner",
+    "tags": ["places", "shopping"]
+  },
+  {
+    "spanish": "boliches",
+    "english": "nightclubs",
+    "category": "social",
+    "difficulty": "beginner",
+    "tags": ["nightlife", "slang", "bar"]
+  },
+  {
+    "spanish": "finde",
+    "english": "weekend",
+    "category": "slang",
+    "difficulty": "beginner",
+    "tags": ["time", "casual"]
+  },
+  {
+    "spanish": "a la tardecita",
+    "english": "early evening",
+    "category": "other",
+    "difficulty": "intermediate",
+    "tags": ["time"]
+  },
+  {
+    "spanish": "cuadras",
+    "english": "blocks",
+    "category": "directions",
+    "difficulty": "beginner",
+    "tags": ["distance", "navigation"]
+  },
+  {
+    "spanish": "dale",
+    "english": "OK/sure/let's do it",
+    "category": "slang",
+    "difficulty": "beginner",
+    "tags": ["agreement", "casual", "essential"],
+    "context": "Multi-purpose agreement word"
+  },
+  {
+    "spanish": "che",
+    "english": "hey",
+    "category": "slang",
+    "difficulty": "beginner",
+    "tags": ["greeting", "attention", "classic"],
+    "context": "Classic Argentine expression"
+  },
+  {
+    "spanish": "qué carajo",
+    "english": "what the hell",
+    "category": "slang",
+    "difficulty": "intermediate",
+    "tags": ["exclamation", "casual"]
+  },
+  {
+    "spanish": "para acá",
+    "english": "over here",
+    "category": "directions",
+    "difficulty": "beginner",
+    "tags": ["location"]
+  },
+  {
+    "spanish": "para allá",
+    "english": "over there",
+    "category": "directions",
+    "difficulty": "beginner",
+    "tags": ["location"]
+  },
+  {
+    "spanish": "palta",
+    "english": "avocado",
+    "category": "food_drink",
+    "difficulty": "beginner",
+    "tags": ["food"]
+  },
+  {
+    "spanish": "mate",
+    "english": "traditional Argentine drink",
+    "category": "food_drink",
+    "difficulty": "beginner",
+    "tags": ["drink", "essential", "culture"],
+    "context": "Essential part of Argentine culture"
+  },
+  {
+    "spanish": "la previa",
+    "english": "pregame",
+    "category": "social",
+    "difficulty": "intermediate",
+    "tags": ["nightlife", "party", "bar"],
+    "context": "Drinking at home before going to clubs"
+  },
+  {
+    "spanish": "jodas",
+    "english": "parties",
+    "category": "social",
+    "difficulty": "intermediate",
+    "tags": ["nightlife", "slang"]
+  },
+  {
+    "spanish": "charlar",
+    "english": "to chat",
+    "category": "social",
+    "difficulty": "beginner",
+    "tags": ["conversation"]
+  },
+  {
+    "spanish": "conversar",
+    "english": "to chat",
+    "category": "social",
+    "difficulty": "beginner",
+    "tags": ["conversation"]
+  },
+  {
+    "spanish": "¿Querés ir a tomar algo?",
+    "english": "Want to go for a drink?",
+    "category": "dating",
+    "difficulty": "beginner",
+    "tags": ["invitation", "bar", "casual"],
+    "context": "Common way to ask someone out"
+  },
+  {
+    "spanish": "¿Qué te parece si vamos a...?",
+    "english": "What do you think if we go to...?",
+    "category": "social",
+    "difficulty": "intermediate",
+    "tags": ["invitation", "suggestion"]
+  },
+  {
+    "spanish": "Che, ¿vamos a la playa?",
+    "english": "Hey, should we go to the beach?",
+    "category": "social",
+    "difficulty": "beginner",
+    "tags": ["invitation", "casual"]
+  },
+  {
+    "spanish": "Me encanta la idea",
+    "english": "I love the idea",
+    "category": "social",
+    "difficulty": "beginner",
+    "tags": ["agreement", "enthusiasm"]
+  },
+  {
+    "spanish": "Disculpame, no voy a poder",
+    "english": "Sorry, I won't be able to",
+    "category": "social",
+    "difficulty": "intermediate",
+    "tags": ["decline", "polite"]
+  },
+  {
+    "spanish": "Disculpe, ¿dónde está...?",
+    "english": "Excuse me, where is...?",
+    "category": "directions",
+    "difficulty": "beginner",
+    "tags": ["question", "formal"]
+  },
+  {
+    "spanish": "Disculpe, ¿dónde queda...?",
+    "english": "Excuse me, where is...?",
+    "category": "directions",
+    "difficulty": "beginner",
+    "tags": ["question", "formal"]
+  },
+  {
+    "spanish": "¿Cómo puedo llegar a...?",
+    "english": "How can I get to...?",
+    "category": "directions",
+    "difficulty": "intermediate",
+    "tags": ["question", "navigation"]
+  },
+  {
+    "spanish": "andá recto X cuadras",
+    "english": "go straight X blocks",
+    "category": "directions",
+    "difficulty": "intermediate",
+    "tags": ["instruction", "navigation"]
+  },
+  {
+    "spanish": "doblá a la derecha",
+    "english": "turn right",
+    "category": "directions",
+    "difficulty": "beginner",
+    "tags": ["instruction", "navigation"]
+  },
+  {
+    "spanish": "doblá a la izquierda",
+    "english": "turn left",
+    "category": "directions",
+    "difficulty": "beginner",
+    "tags": ["instruction", "navigation"]
+  },
+  {
+    "spanish": "cruzá la avenida",
+    "english": "cross the avenue",
+    "category": "directions",
+    "difficulty": "beginner",
+    "tags": ["instruction", "navigation"]
+  },
+  {
+    "spanish": "está al lado de...",
+    "english": "it's next to...",
+    "category": "directions",
+    "difficulty": "beginner",
+    "tags": ["location"]
+  },
+  {
+    "spanish": "a la vuelta de la esquina",
+    "english": "around the corner",
+    "category": "directions",
+    "difficulty": "intermediate",
+    "tags": ["location", "idiom"]
+  },
+  {
+    "spanish": "y después",
+    "english": "and then",
+    "category": "grammar",
+    "difficulty": "beginner",
+    "tags": ["connector"]
+  },
+  {
+    "spanish": "porque",
+    "english": "because",
+    "category": "grammar",
+    "difficulty": "beginner",
+    "tags": ["connector"]
+  },
+  {
+    "spanish": "hasta que",
+    "english": "until",
+    "category": "grammar",
+    "difficulty": "intermediate",
+    "tags": ["connector"]
+  },
+  {
+    "spanish": "me parece que...",
+    "english": "I think that...",
+    "category": "grammar",
+    "difficulty": "intermediate",
+    "tags": ["opinion"]
+  },
+  {
+    "spanish": "prefiero... que...",
+    "english": "I prefer... than...",
+    "category": "grammar",
+    "difficulty": "intermediate",
+    "tags": ["opinion", "preference"]
+  },
+  {
+    "spanish": "terminé mi relación",
+    "english": "I ended my relationship",
+    "category": "dating",
+    "difficulty": "intermediate",
+    "tags": ["relationship", "breakup"]
+  },
+  {
+    "spanish": "corté con mi pareja",
+    "english": "I broke up with my partner",
+    "category": "dating",
+    "difficulty": "intermediate",
+    "tags": ["relationship", "breakup"]
+  },
+  {
+    "spanish": "estoy estresado",
+    "english": "I'm stressed",
+    "category": "emotions",
+    "difficulty": "beginner",
+    "tags": ["feeling"]
+  },
+  {
+    "spanish": "mi cerebro está lento hoy",
+    "english": "my brain is slow today",
+    "category": "emotions",
+    "difficulty": "intermediate",
+    "tags": ["feeling", "casual"]
+  },
+  {
+    "spanish": "está lindo el día",
+    "english": "it's a nice day",
+    "category": "other",
+    "difficulty": "beginner",
+    "tags": ["weather", "small_talk"]
+  },
+  {
+    "spanish": "el año pasado fue una locura",
+    "english": "last year was crazy",
+    "category": "other",
+    "difficulty": "intermediate",
+    "tags": ["experience", "idiom"]
+  },
+  {
+    "spanish": "crecí a nivel personal",
+    "english": "I grew personally",
+    "category": "other",
+    "difficulty": "advanced",
+    "tags": ["self_development"]
+  },
+  {
+    "spanish": "prefiero ir a fiestas en las casas que ir a los boliches",
+    "english": "I prefer to go to house parties than to go to clubs",
+    "category": "social",
+    "difficulty": "intermediate",
+    "tags": ["preference", "nightlife"]
+  },
+  {
+    "spanish": "espero que encontremos una joda",
+    "english": "I hope we find a party",
+    "category": "social",
+    "difficulty": "intermediate",
+    "tags": ["nightlife", "hope"]
+  },
+  {
+    "spanish": "charlé con mucha gente en el bar",
+    "english": "I chatted with many people at the bar",
+    "category": "social",
+    "difficulty": "intermediate",
+    "tags": ["bar", "conversation"]
+  },
+  {
+    "spanish": "pan tostado con palta",
+    "english": "toast with avocado",
+    "category": "food_drink",
+    "difficulty": "beginner",
+    "tags": ["food", "breakfast"]
+  },
+  {
+    "spanish": "cacao con café",
+    "english": "hot chocolate with coffee",
+    "category": "food_drink",
+    "difficulty": "beginner",
+    "tags": ["drink", "breakfast"]
+  },
+  {
+    "spanish": "tomamos mate",
+    "english": "we drink mate",
+    "category": "food_drink",
+    "difficulty": "beginner",
+    "tags": ["drink", "culture"]
+  },
+  {
+    "spanish": "vino naranja",
+    "english": "orange wine",
+    "category": "food_drink",
+    "difficulty": "beginner",
+    "tags": ["drink", "alcohol"]
+  },
+  {
+    "spanish": "tomar algo",
+    "english": "to have a drink",
+    "category": "social",
+    "difficulty": "beginner",
+    "tags": ["bar", "casual"]
+  },
+  {
+    "spanish": "¿Qué hacés?",
+    "english": "What are you doing?",
+    "category": "social",
+    "difficulty": "beginner",
+    "tags": ["question", "voseo", "essential"],
+    "context": "Classic voseo greeting"
+  },
+  {
+    "spanish": "¿Querés venir?",
+    "english": "Do you want to come?",
+    "category": "social",
+    "difficulty": "beginner",
+    "tags": ["invitation", "voseo"]
+  },
+  {
+    "spanish": "hicimos la previa en casa",
+    "english": "we did previa at home",
+    "category": "social",
+    "difficulty": "intermediate",
+    "tags": ["nightlife", "party"]
+  },
+  {
+    "spanish": "¿Qué hiciste ayer?",
+    "english": "What did you do yesterday?",
+    "category": "social",
+    "difficulty": "beginner",
+    "tags": ["question", "past"]
+  },
+  {
+    "spanish": "¿Qué vas a hacer este finde?",
+    "english": "What are you going to do this weekend?",
+    "category": "social",
+    "difficulty": "intermediate",
+    "tags": ["question", "future", "plans"]
+  },
+  {
+    "spanish": "¿Cómo andás?",
+    "english": "How are you?",
+    "category": "social",
+    "difficulty": "beginner",
+    "tags": ["greeting", "casual"]
+  },
+  {
+    "spanish": "me das una mano",
+    "english": "give me a hand",
+    "category": "other",
+    "difficulty": "intermediate",
+    "tags": ["help", "idiom"]
+  },
+  {
+    "spanish": "llamé a mi vieja",
+    "english": "I called my mom",
+    "category": "other",
+    "difficulty": "intermediate",
+    "tags": ["family", "slang"],
+    "context": "'vieja' is informal for 'mom'"
+  },
+  {
+    "spanish": "esperás el bondi",
+    "english": "you wait for the bus",
+    "category": "other",
+    "difficulty": "beginner",
+    "tags": ["transport", "slang"]
+  },
+  {
+    "spanish": "pegás buena onda",
+    "english": "you give off good vibes",
+    "category": "slang",
+    "difficulty": "advanced",
+    "tags": ["personality", "social"],
+    "context": "Compliment about someone's energy/vibe"
+  },
+  {
+    "spanish": "no jodás",
+    "english": "don't mess around / don't be annoying",
+    "category": "slang",
+    "difficulty": "intermediate",
+    "tags": ["casual", "warning"]
+  },
+  {
+    "spanish": "no hinchés",
+    "english": "don't bother me",
+    "category": "slang",
+    "difficulty": "intermediate",
+    "tags": ["casual", "annoyed"]
+  },
+  {
+    "spanish": "te banco",
+    "english": "I support you / I've got your back",
+    "category": "slang",
+    "difficulty": "intermediate",
+    "tags": ["support", "friendship"]
+  }
+]

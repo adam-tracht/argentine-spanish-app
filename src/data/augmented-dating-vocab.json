@@ -1,0 +1,367 @@
+[
+  {
+    "spanish": "sos re linda",
+    "english": "you're really pretty",
+    "category": "dating",
+    "difficulty": "beginner",
+    "tags": ["compliment", "flirt", "casual"],
+    "context": "'re' is slang intensifier"
+  },
+  {
+    "spanish": "sos re copada",
+    "english": "you're really cool",
+    "category": "dating",
+    "difficulty": "intermediate",
+    "tags": ["compliment", "personality"]
+  },
+  {
+    "spanish": "me caés re bien",
+    "english": "I really like you (as a person)",
+    "category": "dating",
+    "difficulty": "intermediate",
+    "tags": ["compliment", "interest"]
+  },
+  {
+    "spanish": "tenés buena onda",
+    "english": "you have good vibes",
+    "category": "dating",
+    "difficulty": "intermediate",
+    "tags": ["compliment", "personality"]
+  },
+  {
+    "spanish": "¿me pasás tu insta?",
+    "english": "can you give me your Instagram?",
+    "category": "dating",
+    "difficulty": "beginner",
+    "tags": ["social_media", "contact"]
+  },
+  {
+    "spanish": "¿puedo pedirte el número?",
+    "english": "can I get your number?",
+    "category": "dating",
+    "difficulty": "beginner",
+    "tags": ["contact", "direct"]
+  },
+  {
+    "spanish": "¿venís seguido acá?",
+    "english": "do you come here often?",
+    "category": "dating",
+    "difficulty": "intermediate",
+    "tags": ["bar", "opener"]
+  },
+  {
+    "spanish": "¿te puedo invitar algo?",
+    "english": "can I buy you a drink?",
+    "category": "dating",
+    "difficulty": "beginner",
+    "tags": ["bar", "invitation"]
+  },
+  {
+    "spanish": "¿querés salir algún día?",
+    "english": "do you want to go out sometime?",
+    "category": "dating",
+    "difficulty": "beginner",
+    "tags": ["invitation", "date"]
+  },
+  {
+    "spanish": "la pasé re bien",
+    "english": "I had a really good time",
+    "category": "dating",
+    "difficulty": "intermediate",
+    "tags": ["feedback", "positive"]
+  },
+  {
+    "spanish": "me encantaría verte de nuevo",
+    "english": "I'd love to see you again",
+    "category": "dating",
+    "difficulty": "intermediate",
+    "tags": ["interest", "followup"]
+  },
+  {
+    "spanish": "boludo/boluda",
+    "english": "dude (can be friendly or insulting)",
+    "category": "slang",
+    "difficulty": "beginner",
+    "tags": ["casual", "gen_z", "essential"],
+    "context": "Extremely common, use with friends only"
+  },
+  {
+    "spanish": "re",
+    "english": "really/very",
+    "category": "slang",
+    "difficulty": "beginner",
+    "tags": ["intensifier", "gen_z", "essential"],
+    "context": "Used constantly by young people"
+  },
+  {
+    "spanish": "zarpado",
+    "english": "crazy/wild/intense",
+    "category": "slang",
+    "difficulty": "intermediate",
+    "tags": ["exclamation", "gen_z"]
+  },
+  {
+    "spanish": "flashear",
+    "english": "to imagine/trip out/space out",
+    "category": "slang",
+    "difficulty": "advanced",
+    "tags": ["mental", "gen_z"],
+    "context": "Like 'I was tripping' or 'I spaced out'"
+  },
+  {
+    "spanish": "manija",
+    "english": "anxious/eager/hyped",
+    "category": "slang",
+    "difficulty": "advanced",
+    "tags": ["emotion", "gen_z"]
+  },
+  {
+    "spanish": "al pedo",
+    "english": "for nothing/pointless",
+    "category": "slang",
+    "difficulty": "intermediate",
+    "tags": ["expression", "casual"]
+  },
+  {
+    "spanish": "alta fiesta",
+    "english": "great party",
+    "category": "slang",
+    "difficulty": "intermediate",
+    "tags": ["nightlife", "intensifier"],
+    "context": "'alta/alto' used as intensifier"
+  },
+  {
+    "spanish": "alto/alta",
+    "english": "big/great (intensifier)",
+    "category": "slang",
+    "difficulty": "intermediate",
+    "tags": ["intensifier", "gen_z"]
+  },
+  {
+    "spanish": "copado/copada",
+    "english": "cool/awesome",
+    "category": "slang",
+    "difficulty": "beginner",
+    "tags": ["positive", "essential"]
+  },
+  {
+    "spanish": "la posta",
+    "english": "the truth/the real deal",
+    "category": "slang",
+    "difficulty": "intermediate",
+    "tags": ["emphasis", "gen_z"]
+  },
+  {
+    "spanish": "ni en pedo",
+    "english": "no way/not a chance",
+    "category": "slang",
+    "difficulty": "intermediate",
+    "tags": ["refusal", "strong"]
+  },
+  {
+    "spanish": "qué garrón",
+    "english": "what a bummer/drag",
+    "category": "slang",
+    "difficulty": "intermediate",
+    "tags": ["disappointment", "sympathy"]
+  },
+  {
+    "spanish": "está re bueno/buena",
+    "english": "he/she is really hot",
+    "category": "dating",
+    "difficulty": "intermediate",
+    "tags": ["attraction", "physical"]
+  },
+  {
+    "spanish": "chamuyar",
+    "english": "to sweet talk/flirt/chat up",
+    "category": "dating",
+    "difficulty": "advanced",
+    "tags": ["flirt", "slang"],
+    "context": "The art of flirting/charming someone"
+  },
+  {
+    "spanish": "chamuyo",
+    "english": "sweet talk/flirting/BS",
+    "category": "dating",
+    "difficulty": "advanced",
+    "tags": ["flirt", "slang"]
+  },
+  {
+    "spanish": "levantar",
+    "english": "to pick up (someone romantically)",
+    "category": "dating",
+    "difficulty": "intermediate",
+    "tags": ["flirt", "nightlife"]
+  },
+  {
+    "spanish": "garchar",
+    "english": "to have sex (vulgar)",
+    "category": "dating",
+    "difficulty": "advanced",
+    "tags": ["sexual", "vulgar"],
+    "context": "Very casual/vulgar - use with caution"
+  },
+  {
+    "spanish": "curro",
+    "english": "job/hustle/scam",
+    "category": "slang",
+    "difficulty": "intermediate",
+    "tags": ["work", "money"]
+  },
+  {
+    "spanish": "guita/plata",
+    "english": "money",
+    "category": "slang",
+    "difficulty": "beginner",
+    "tags": ["money", "essential"]
+  },
+  {
+    "spanish": "morfi",
+    "english": "food",
+    "category": "slang",
+    "difficulty": "intermediate",
+    "tags": ["food", "lunfardo"]
+  },
+  {
+    "spanish": "birra",
+    "english": "beer",
+    "category": "slang",
+    "difficulty": "beginner",
+    "tags": ["alcohol", "bar"]
+  },
+  {
+    "spanish": "fernet",
+    "english": "fernet (Argentine drink)",
+    "category": "food_drink",
+    "difficulty": "beginner",
+    "tags": ["alcohol", "culture"],
+    "context": "Popular bitter liqueur mixed with Coke"
+  },
+  {
+    "spanish": "escabiar",
+    "english": "to drink alcohol",
+    "category": "slang",
+    "difficulty": "intermediate",
+    "tags": ["alcohol", "party"]
+  },
+  {
+    "spanish": "chela",
+    "english": "beer",
+    "category": "slang",
+    "difficulty": "beginner",
+    "tags": ["alcohol", "casual"]
+  },
+  {
+    "spanish": "¿de qué laburás?",
+    "english": "what do you do for work?",
+    "category": "social",
+    "difficulty": "intermediate",
+    "tags": ["small_talk", "work"]
+  },
+  {
+    "spanish": "¿en qué barrio vivís?",
+    "english": "what neighborhood do you live in?",
+    "category": "social",
+    "difficulty": "intermediate",
+    "tags": ["small_talk", "location"]
+  },
+  {
+    "spanish": "¿de dónde sos?",
+    "english": "where are you from?",
+    "category": "social",
+    "difficulty": "beginner",
+    "tags": ["small_talk", "origin"]
+  },
+  {
+    "spanish": "soy yankee",
+    "english": "I'm American",
+    "category": "other",
+    "difficulty": "beginner",
+    "tags": ["nationality", "identity"]
+  },
+  {
+    "spanish": "recién llegué",
+    "english": "I just arrived",
+    "category": "other",
+    "difficulty": "intermediate",
+    "tags": ["recent", "travel"]
+  },
+  {
+    "spanish": "estoy de visita",
+    "english": "I'm visiting",
+    "category": "other",
+    "difficulty": "beginner",
+    "tags": ["travel", "temporary"]
+  },
+  {
+    "spanish": "vine a conocer la ciudad",
+    "english": "I came to get to know the city",
+    "category": "other",
+    "difficulty": "intermediate",
+    "tags": ["travel", "exploration"]
+  },
+  {
+    "spanish": "¿qué me recomendás?",
+    "english": "what do you recommend?",
+    "category": "social",
+    "difficulty": "intermediate",
+    "tags": ["advice", "question"]
+  },
+  {
+    "spanish": "dividimos la cuenta",
+    "english": "let's split the bill",
+    "category": "social",
+    "difficulty": "intermediate",
+    "tags": ["money", "date"]
+  },
+  {
+    "spanish": "invito yo",
+    "english": "I'll pay / it's on me",
+    "category": "social",
+    "difficulty": "intermediate",
+    "tags": ["money", "generous"]
+  },
+  {
+    "spanish": "me re copa",
+    "english": "I really like it / I'm really into it",
+    "category": "slang",
+    "difficulty": "intermediate",
+    "tags": ["enthusiasm", "positive"]
+  },
+  {
+    "spanish": "qué piola",
+    "english": "how cool/nice",
+    "category": "slang",
+    "difficulty": "intermediate",
+    "tags": ["positive", "casual"]
+  },
+  {
+    "spanish": "es un grosso/grossa",
+    "english": "he/she is awesome/a legend",
+    "category": "slang",
+    "difficulty": "intermediate",
+    "tags": ["compliment", "admiration"]
+  },
+  {
+    "spanish": "estoy al horno",
+    "english": "I'm screwed/in trouble",
+    "category": "slang",
+    "difficulty": "advanced",
+    "tags": ["problem", "idiom"]
+  },
+  {
+    "spanish": "me cuelgo",
+    "english": "I zone out / I get absorbed",
+    "category": "slang",
+    "difficulty": "advanced",
+    "tags": ["mental_state", "casual"]
+  },
+  {
+    "spanish": "estoy podrido",
+    "english": "I'm fed up / sick of it",
+    "category": "slang",
+    "difficulty": "advanced",
+    "tags": ["frustrated", "emotion"]
+  }
+]
