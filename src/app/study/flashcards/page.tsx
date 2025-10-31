@@ -3,6 +3,9 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Flashcard from '@/components/Flashcard';
+import Button from '@/components/ui/Button';
+import Card from '@/components/ui/Card';
+import ProgressBar from '@/components/ui/ProgressBar';
 
 interface Vocabulary {
   id: number;
@@ -113,8 +116,8 @@ export default function FlashcardsPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-sky-50 to-indigo-100 flex items-center justify-center">
-        <div className="text-2xl text-gray-600">Loading flashcards...</div>
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-xl text-gray-600">Loading flashcards...</div>
       </div>
     );
   }
@@ -128,23 +131,20 @@ export default function FlashcardsPage() {
   const progress = ((sessionStats.reviewed / sessionStats.total) * 100) || 0;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sky-50 to-indigo-100">
+    <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white shadow-sm">
+      <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           <Link
             href="/"
-            className="text-2xl font-bold text-gray-900 hover:text-blue-600 transition"
+            className="text-2xl font-bold text-gray-900 hover:text-blue-600"
           >
             ← Argentine Spanish 🇦🇷
           </Link>
           {sessionStarted && (
-            <button
-              onClick={resetSession}
-              className="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition"
-            >
+            <Button variant="secondary" size="sm" onClick={resetSession}>
               New Session
-            </button>
+            </Button>
           )}
         </div>
       </header>
@@ -156,12 +156,12 @@ export default function FlashcardsPage() {
             <h1 className="text-4xl font-bold text-gray-900 mb-2 text-center">
               Flashcards
             </h1>
-            <p className="text-lg text-gray-600 mb-8 text-center">
+            <p className="text-lg text-gray-600 mb-10 text-center">
               Study vocabulary with spaced repetition
             </p>
 
-            <div className="bg-white rounded-xl shadow-md p-8 mb-6">
-              <h2 className="text-xl font-semibold text-gray-900 mb-4">
+            <Card padding="lg" className="mb-6">
+              <h2 className="text-xl font-semibold text-gray-900 mb-6">
                 Session Settings
               </h2>
 
@@ -173,7 +173,7 @@ export default function FlashcardsPage() {
                 <select
                   value={categoryFilter}
                   onChange={(e) => setCategoryFilter(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-900"
                 >
                   <option value="all">All Categories</option>
                   {categories.map((cat) => (
@@ -192,7 +192,7 @@ export default function FlashcardsPage() {
                 <select
                   value={difficultyFilter}
                   onChange={(e) => setDifficultyFilter(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-900"
                 >
                   <option value="all">All Levels</option>
                   {difficulties.map((diff) => (
@@ -203,109 +203,89 @@ export default function FlashcardsPage() {
                 </select>
               </div>
 
-              <button
-                onClick={startSession}
-                className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition text-lg"
-              >
+              <Button variant="primary" size="lg" fullWidth onClick={startSession}>
                 Start Session ({applyFilters().length} cards)
-              </button>
-            </div>
+              </Button>
+            </Card>
 
             {/* Instructions */}
-            <div className="bg-blue-50 rounded-lg p-6">
-              <h3 className="font-semibold text-gray-900 mb-3">
+            <Card padding="md" className="bg-blue-50 border border-blue-100">
+              <h3 className="font-semibold text-gray-900 mb-4">
                 How it works:
               </h3>
-              <ul className="space-y-2 text-sm text-gray-700">
+              <ul className="space-y-2.5 text-sm text-gray-700 leading-relaxed">
                 <li>
-                  1. See the Spanish word and try to recall the English
-                  translation
+                  <span className="font-medium">1.</span> See the Spanish word and try to recall the English translation
                 </li>
-                <li>2. Click the card to reveal the answer</li>
+                <li><span className="font-medium">2.</span> Click the card to reveal the answer</li>
                 <li>
-                  3. Rate how well you knew it:
-                  <ul className="ml-4 mt-1 space-y-1">
+                  <span className="font-medium">3.</span> Rate how well you knew it:
+                  <ul className="ml-4 mt-2 space-y-1.5">
                     <li>
-                      <span className="font-semibold text-red-600">
-                        Again
-                      </span>{' '}
-                      - Didn't know it at all
+                      <span className="font-semibold text-red-600">Again</span> - Didn't know it at all
                     </li>
                     <li>
-                      <span className="font-semibold text-orange-600">
-                        Hard
-                      </span>{' '}
-                      - Struggled to remember
+                      <span className="font-semibold text-amber-600">Hard</span> - Struggled to remember
                     </li>
                     <li>
-                      <span className="font-semibold text-green-600">
-                        Good
-                      </span>{' '}
-                      - Remembered with some effort
+                      <span className="font-semibold text-green-600">Good</span> - Remembered with some effort
                     </li>
                     <li>
-                      <span className="font-semibold text-blue-600">
-                        Easy
-                      </span>{' '}
-                      - Knew it instantly
+                      <span className="font-semibold text-blue-600">Easy</span> - Knew it instantly
                     </li>
                   </ul>
                 </li>
                 <li>
-                  4. Your ratings help the app show you words at the optimal
-                  time
+                  <span className="font-medium">4.</span> Your ratings help the app show you words at the optimal time
                 </li>
               </ul>
-            </div>
+            </Card>
           </div>
         )}
 
         {/* Session Complete */}
         {!sessionStarted && !showSettings && (
           <div className="max-w-2xl mx-auto text-center">
-            <div className="bg-white rounded-xl shadow-md p-8 mb-6">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <Card padding="lg">
+              <h2 className="text-3xl font-bold text-gray-900 mb-3">
                 Session Complete! 🎉
               </h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-gray-600 mb-8">
                 Great work! You reviewed {sessionStats.reviewed} cards.
               </p>
 
               {/* Stats */}
-              <div className="grid grid-cols-4 gap-4 mb-6">
-                <div className="bg-blue-50 rounded-lg p-4">
-                  <div className="text-2xl font-bold text-blue-600">
+              <div className="grid grid-cols-4 gap-4 mb-8">
+                <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
+                  <div className="text-3xl font-bold text-blue-600 mb-1">
                     {sessionStats.easy}
                   </div>
                   <div className="text-sm text-gray-600">Easy</div>
                 </div>
-                <div className="bg-green-50 rounded-lg p-4">
-                  <div className="text-2xl font-bold text-green-600">
+                <div className="bg-green-50 rounded-lg p-4 border border-green-100">
+                  <div className="text-3xl font-bold text-green-600 mb-1">
                     {sessionStats.good}
                   </div>
                   <div className="text-sm text-gray-600">Good</div>
                 </div>
-                <div className="bg-orange-50 rounded-lg p-4">
-                  <div className="text-2xl font-bold text-orange-600">
+                <div className="bg-amber-50 rounded-lg p-4 border border-amber-100">
+                  <div className="text-3xl font-bold text-amber-600 mb-1">
                     {sessionStats.hard}
                   </div>
                   <div className="text-sm text-gray-600">Hard</div>
                 </div>
-                <div className="bg-red-50 rounded-lg p-4">
-                  <div className="text-2xl font-bold text-red-600">
+                <div className="bg-red-50 rounded-lg p-4 border border-red-100">
+                  <div className="text-3xl font-bold text-red-600 mb-1">
                     {sessionStats.again}
                   </div>
                   <div className="text-sm text-gray-600">Again</div>
                 </div>
               </div>
 
-              <button
-                onClick={resetSession}
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
-              >
+              <Button variant="primary" size="lg" onClick={resetSession}>
                 Start New Session
-              </button>
-            </div>
+              </Button>
+            </Card>
           </div>
         )}
 
@@ -313,19 +293,14 @@ export default function FlashcardsPage() {
         {sessionStarted && currentCard && (
           <div>
             {/* Progress Bar */}
-            <div className="max-w-2xl mx-auto mb-6">
-              <div className="flex justify-between text-sm text-gray-600 mb-2">
-                <span>
-                  Card {sessionStats.reviewed + 1} of {sessionStats.total}
-                </span>
-                <span>{Math.round(progress)}% complete</span>
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-3">
-                <div
-                  className="bg-blue-600 h-3 rounded-full transition-all duration-300"
-                  style={{ width: `${progress}%` }}
-                />
-              </div>
+            <div className="max-w-2xl mx-auto mb-8">
+              <ProgressBar
+                value={progress}
+                showLabel
+                label={`Card ${sessionStats.reviewed + 1} of ${sessionStats.total}`}
+                variant="primary"
+                size="md"
+              />
             </div>
 
             {/* Flashcard */}
@@ -341,34 +316,34 @@ export default function FlashcardsPage() {
 
             {/* Session Stats */}
             <div className="max-w-2xl mx-auto mt-8">
-              <div className="bg-white rounded-lg shadow p-4">
+              <Card padding="md">
                 <div className="flex justify-around text-sm">
                   <div className="text-center">
-                    <div className="text-blue-600 font-semibold">
+                    <div className="text-2xl text-blue-600 font-semibold mb-1">
                       {sessionStats.easy}
                     </div>
                     <div className="text-gray-500">Easy</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-green-600 font-semibold">
+                    <div className="text-2xl text-green-600 font-semibold mb-1">
                       {sessionStats.good}
                     </div>
                     <div className="text-gray-500">Good</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-orange-600 font-semibold">
+                    <div className="text-2xl text-amber-600 font-semibold mb-1">
                       {sessionStats.hard}
                     </div>
                     <div className="text-gray-500">Hard</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-red-600 font-semibold">
+                    <div className="text-2xl text-red-600 font-semibold mb-1">
                       {sessionStats.again}
                     </div>
                     <div className="text-gray-500">Again</div>
                   </div>
                 </div>
-              </div>
+              </Card>
             </div>
           </div>
         )}

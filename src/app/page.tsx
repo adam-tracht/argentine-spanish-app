@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import { useSession, signIn, signOut } from 'next-auth/react';
+import Button from '@/components/ui/Button';
+import Card from '@/components/ui/Card';
 
 export default function Home() {
   const { data: session, status } = useSession();
@@ -52,9 +54,9 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sky-50 to-indigo-100">
+    <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white shadow-sm">
+      <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           <h1 className="text-2xl font-bold text-gray-900">
             Argentine Spanish 🇦🇷
@@ -64,166 +66,158 @@ export default function Home() {
               <div className="text-gray-500">Loading...</div>
             ) : session ? (
               <div className="flex items-center gap-4">
-                <span className="text-gray-700">
+                <span className="text-gray-700 text-sm">
                   {session.user?.name || session.user?.email}
                 </span>
-                <button
-                  onClick={() => signOut()}
-                  className="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition"
-                >
+                <Button variant="secondary" size="sm" onClick={() => signOut()}>
                   Sign Out
-                </button>
+                </Button>
               </div>
             ) : (
-              <button
-                onClick={() => signIn()}
-                className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-              >
+              <Button variant="primary" size="sm" onClick={() => signIn()}>
                 Sign In
-              </button>
+              </Button>
             )}
           </div>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Hero Section */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-bold text-gray-900 mb-4">
             Master Argentine Spanish
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Learn the slang, verb conjugations, and conversation skills you need to date,
             socialize, and thrive in Buenos Aires
           </p>
         </div>
 
         {/* Study Mode Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {studyModes.map((mode) => (
             <Link
               key={mode.href}
               href={mode.href}
-              className="group block bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
+              className="group block"
             >
-              <div className={`${mode.color} p-6 flex justify-center`}>
-                <span className="text-6xl">{mode.icon}</span>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition">
-                  {mode.title}
-                </h3>
-                <p className="text-gray-600">{mode.description}</p>
-              </div>
+              <Card hover padding="none" className="overflow-hidden h-full">
+                <div className={`${mode.color} bg-opacity-10 p-8 flex justify-center border-b border-gray-100`}>
+                  <span className="text-6xl">{mode.icon}</span>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600">
+                    {mode.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{mode.description}</p>
+                </div>
+              </Card>
             </Link>
           ))}
         </div>
 
         {/* Features Section */}
-        <div className="bg-white rounded-xl shadow-md p-8 mb-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">
+        <Card padding="lg" className="mb-16">
+          <h3 className="text-2xl font-bold text-gray-900 mb-8">
             What You'll Learn
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="flex items-start gap-3">
-              <span className="text-2xl">🗣️</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="flex items-start gap-4">
+              <span className="text-3xl flex-shrink-0">🗣️</span>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-1">
+                <h4 className="font-semibold text-gray-900 mb-1 text-lg">
                   Voseo Conjugations
                 </h4>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-sm leading-relaxed">
                   Master the vos form used in Argentina instead of tú
                 </p>
               </div>
             </div>
-            <div className="flex items-start gap-3">
-              <span className="text-2xl">💃</span>
+            <div className="flex items-start gap-4">
+              <span className="text-3xl flex-shrink-0">💃</span>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-1">
+                <h4 className="font-semibold text-gray-900 mb-1 text-lg">
                   Dating & Social Phrases
                 </h4>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-sm leading-relaxed">
                   Flirt, make plans, and connect with confidence
                 </p>
               </div>
             </div>
-            <div className="flex items-start gap-3">
-              <span className="text-2xl">🎭</span>
+            <div className="flex items-start gap-4">
+              <span className="text-3xl flex-shrink-0">🎭</span>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-1">
+                <h4 className="font-semibold text-gray-900 mb-1 text-lg">
                   Gen-Z Slang
                 </h4>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-sm leading-relaxed">
                   Sound natural with boludo, re, zarpado, and more
                 </p>
               </div>
             </div>
-            <div className="flex items-start gap-3">
-              <span className="text-2xl">🧉</span>
+            <div className="flex items-start gap-4">
+              <span className="text-3xl flex-shrink-0">🧉</span>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-1">
+                <h4 className="font-semibold text-gray-900 mb-1 text-lg">
                   Cultural Context
                 </h4>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-sm leading-relaxed">
                   Learn about la previa, mate culture, and porteño life
                 </p>
               </div>
             </div>
           </div>
-        </div>
+        </Card>
 
         {/* Stats Preview (if logged in) */}
         {session && (
-          <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl shadow-md p-8 text-white">
-            <h3 className="text-2xl font-bold mb-6">Your Progress</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <Card padding="lg" className="bg-blue-50 border border-blue-100">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">Your Progress</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-4xl font-bold mb-2">0</div>
-                <div className="text-blue-100">Cards Reviewed</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">0</div>
+                <div className="text-gray-600 text-sm">Cards Reviewed</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold mb-2">0</div>
-                <div className="text-blue-100">Day Streak</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">0</div>
+                <div className="text-gray-600 text-sm">Day Streak</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold mb-2">0</div>
-                <div className="text-blue-100">Words Mastered</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">0</div>
+                <div className="text-gray-600 text-sm">Words Mastered</div>
               </div>
             </div>
-            <div className="mt-6 text-center">
-              <Link
-                href="/dashboard"
-                className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition"
-              >
-                View Full Dashboard
+            <div className="mt-8 text-center">
+              <Link href="/dashboard">
+                <Button variant="primary" size="lg">
+                  View Full Dashboard
+                </Button>
               </Link>
             </div>
-          </div>
+          </Card>
         )}
 
         {/* CTA for non-logged in users */}
         {!session && status !== 'loading' && (
-          <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl shadow-md p-8 text-white text-center">
-            <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
-            <p className="text-blue-100 mb-6">
+          <Card padding="lg" className="text-center bg-blue-50 border border-blue-100">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h3>
+            <p className="text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
               Sign in to track your progress, save custom vocab, and unlock personalized learning
             </p>
-            <button
-              onClick={() => signIn()}
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition"
-            >
+            <Button variant="primary" size="lg" onClick={() => signIn()}>
               Sign In to Start Learning
-            </button>
-          </div>
+            </Button>
+          </Card>
         )}
       </main>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-gray-200 mt-12">
+      <footer className="bg-white border-t border-gray-200 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-gray-600">
-          <p>Built for mastering Argentine Spanish 🇦🇷</p>
-          <p className="text-sm mt-2">
+          <p className="font-medium">Built for mastering Argentine Spanish 🇦🇷</p>
+          <p className="text-sm mt-2 text-gray-500">
             Perfect for dating, socializing, and navigating Buenos Aires
           </p>
         </div>
