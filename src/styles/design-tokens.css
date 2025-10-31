@@ -134,11 +134,4 @@
   --z-tooltip: 1400;
 }
 
-/* Dark Mode Support (optional future enhancement) */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-gray-50: #1f2937;
-    --color-gray-100: #374151;
-    --color-gray-900: #f9fafb;
-  }
-}
+/* Dark mode disabled - keeping light mode only for consistent design */
