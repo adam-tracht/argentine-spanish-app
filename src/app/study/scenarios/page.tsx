@@ -27,6 +27,8 @@ export default function ScenariosPage() {
   const [currentLineIndex, setCurrentLineIndex] = useState(0);
   const [showTranslation, setShowTranslation] = useState(false);
   const [completedScenarios, setCompletedScenarios] = useState<number[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedDifficulty, setSelectedDifficulty] = useState<string>('all');
 
   useEffect(() => {
     fetchScenarios();
@@ -96,10 +98,34 @@ export default function ScenariosPage() {
         return '🎉';
       case 'directions':
         return '🗺️';
+      case 'food_drink':
+        return '🍽️';
+      case 'other':
+        return '🛍️';
       default:
         return '💬';
     }
   };
+
+  const getCategoryLabel = (category: string) => {
+    switch (category) {
+      case 'food_drink':
+        return 'Food & Drink';
+      default:
+        return category.charAt(0).toUpperCase() + category.slice(1);
+    }
+  };
+
+  // Get unique categories and difficulties from scenarios
+  const categories = ['all', ...Array.from(new Set(scenarios.map(s => s.category)))];
+  const difficulties = ['all', 'beginner', 'intermediate', 'advanced'];
+
+  // Filter scenarios
+  const filteredScenarios = scenarios.filter(scenario => {
+    const categoryMatch = selectedCategory === 'all' || scenario.category === selectedCategory;
+    const difficultyMatch = selectedDifficulty === 'all' || scenario.difficulty === selectedDifficulty;
+    return categoryMatch && difficultyMatch;
+  });
 
   if (loading) {
     return (
@@ -149,9 +175,72 @@ export default function ScenariosPage() {
               </p>
             </div>
 
+            {/* Filters */}
+            <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Filter Scenarios</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Category Filter */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Category
+                  </label>
+                  <div className="flex flex-wrap gap-2">
+                    {categories.map((category) => (
+                      <button
+                        key={category}
+                        onClick={() => setSelectedCategory(category)}
+                        className={`px-4 py-2 rounded-lg text-sm font-medium transition ${
+                          selectedCategory === category
+                            ? 'bg-blue-600 text-white shadow-md'
+                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                        }`}
+                      >
+                        {category === 'all' ? (
+                          'All'
+                        ) : (
+                          <>
+                            {getCategoryIcon(category)} {getCategoryLabel(category)}
+                          </>
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Difficulty Filter */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Difficulty
+                  </label>
+                  <div className="flex flex-wrap gap-2">
+                    {difficulties.map((difficulty) => (
+                      <button
+                        key={difficulty}
+                        onClick={() => setSelectedDifficulty(difficulty)}
+                        className={`px-4 py-2 rounded-lg text-sm font-medium transition ${
+                          selectedDifficulty === difficulty
+                            ? 'bg-blue-600 text-white shadow-md'
+                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                        }`}
+                      >
+                        {difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Results count */}
+              <div className="mt-4 pt-4 border-t border-gray-200">
+                <p className="text-sm text-gray-600">
+                  Showing <span className="font-semibold text-gray-900">{filteredScenarios.length}</span> of {scenarios.length} scenarios
+                </p>
+              </div>
+            </div>
+
             {/* Scenarios Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {scenarios.map((scenario) => (
+              {filteredScenarios.map((scenario) => (
                 <div
                   key={scenario.id}
                   className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"

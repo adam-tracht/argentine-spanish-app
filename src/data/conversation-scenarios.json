@@ -448,5 +448,261 @@
         ]
       }
     ]
+  },
+  {
+    "title": "Ordering at a restaurant",
+    "description": "Order food at an Argentine restaurant or parrilla",
+    "category": "food_drink",
+    "difficulty": "beginner",
+    "tags": ["restaurant", "food", "ordering"],
+    "dialog": [
+      {
+        "speaker": "other",
+        "spanish": "Hola, ¿qué van a tomar?",
+        "english": "Hi, what are you going to drink?"
+      },
+      {
+        "speaker": "you",
+        "spanish": "Una cerveza, por favor.",
+        "english": "A beer, please.",
+        "options": [
+          "Un vino tinto (A red wine)",
+          "Agua con gas (Sparkling water)",
+          "Un fernet con coca (A fernet and coke)"
+        ]
+      },
+      {
+        "speaker": "other",
+        "spanish": "Dale. ¿Ya saben qué van a comer?",
+        "english": "Sure. Do you know what you're going to eat?"
+      },
+      {
+        "speaker": "you",
+        "spanish": "¿Qué me recomendás?",
+        "english": "What do you recommend?",
+        "options": [
+          "¿Cuál es la especialidad? (What's the specialty?)",
+          "Necesito un minuto más (I need one more minute)",
+          "¿Qué trae el bife de chorizo? (What comes with the sirloin steak?)"
+        ]
+      },
+      {
+        "speaker": "other",
+        "spanish": "El bife de chorizo con papas fritas está buenísimo.",
+        "english": "The sirloin steak with fries is delicious."
+      },
+      {
+        "speaker": "you",
+        "spanish": "Dale, me lo llevo. A punto, por favor.",
+        "english": "Okay, I'll take it. Medium, please.",
+        "options": [
+          "Jugoso, por favor (Rare, please)",
+          "Bien cocido, por favor (Well done, please)",
+          "¿Viene con ensalada? (Does it come with salad?)"
+        ]
+      },
+      {
+        "speaker": "other",
+        "spanish": "Perfecto. En unos minutos sale.",
+        "english": "Perfect. It'll be out in a few minutes."
+      },
+      {
+        "speaker": "you",
+        "spanish": "Cuando puedas, la cuenta por favor.",
+        "english": "When you can, the check please.",
+        "options": [
+          "¿Aceptan tarjeta? (Do you accept card?)",
+          "Estuvo todo riquísimo (Everything was delicious)",
+          "¿Cuánto es? (How much is it?)"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Taking a taxi or Uber",
+    "description": "Get a ride and give directions",
+    "category": "directions",
+    "difficulty": "beginner",
+    "tags": ["taxi", "uber", "transportation"],
+    "dialog": [
+      {
+        "speaker": "you",
+        "spanish": "Hola, buenas tardes.",
+        "english": "Hi, good afternoon."
+      },
+      {
+        "speaker": "other",
+        "spanish": "Buenas. ¿A dónde vamos?",
+        "english": "Hello. Where are we going?"
+      },
+      {
+        "speaker": "you",
+        "spanish": "A Palermo Soho, por favor. A la calle Gorriti.",
+        "english": "To Palermo Soho, please. To Gorriti street.",
+        "options": [
+          "¿Sabés dónde queda? (Do you know where it is?)",
+          "Te voy guiando (I'll guide you)",
+          "Tengo la dirección acá (I have the address here)"
+        ]
+      },
+      {
+        "speaker": "other",
+        "spanish": "Sí, tranqui. ¿Qué número?",
+        "english": "Yeah, no problem. What number?"
+      },
+      {
+        "speaker": "you",
+        "spanish": "El 4500. ¿Cuánto tarda más o menos?",
+        "english": "4500. How long does it take more or less?",
+        "options": [
+          "¿Hay mucho tráfico? (Is there a lot of traffic?)",
+          "No tengo apuro (I'm not in a hurry)",
+          "¿Cuál es la mejor ruta? (What's the best route?)"
+        ]
+      },
+      {
+        "speaker": "other",
+        "spanish": "Como media hora. Hay un poco de tráfico.",
+        "english": "About half an hour. There's a bit of traffic."
+      },
+      {
+        "speaker": "you",
+        "spanish": "Dale, no hay drama. Acá está bien, gracias.",
+        "english": "Okay, no problem. Here is fine, thanks.",
+        "options": [
+          "¿Cuánto te debo? (How much do I owe you?)",
+          "Te lo paso por la app (I'll pay through the app)",
+          "Quedáte con el cambio (Keep the change)"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Shopping for clothes",
+    "description": "Buy clothes at a store in Buenos Aires",
+    "category": "other",
+    "difficulty": "intermediate",
+    "tags": ["shopping", "clothes", "store"],
+    "dialog": [
+      {
+        "speaker": "other",
+        "spanish": "Hola, ¿buscás algo en particular?",
+        "english": "Hi, are you looking for something in particular?"
+      },
+      {
+        "speaker": "you",
+        "spanish": "Sí, estoy buscando una remera.",
+        "english": "Yeah, I'm looking for a t-shirt.",
+        "options": [
+          "Busco unos jeans (I'm looking for some jeans)",
+          "Solo estoy mirando (I'm just looking)",
+          "¿Tienen buzos? (Do you have sweatshirts?)"
+        ]
+      },
+      {
+        "speaker": "other",
+        "spanish": "Tenemos estos modelos. ¿Qué talle usás?",
+        "english": "We have these styles. What size do you wear?"
+      },
+      {
+        "speaker": "you",
+        "spanish": "Medium. ¿Puedo probármela?",
+        "english": "Medium. Can I try it on?",
+        "options": [
+          "¿Dónde está el probador? (Where's the fitting room?)",
+          "¿Tienen en otros colores? (Do you have it in other colors?)",
+          "¿Cuánto sale? (How much does it cost?)"
+        ]
+      },
+      {
+        "speaker": "other",
+        "spanish": "Sí, el probador está al fondo a la derecha.",
+        "english": "Yes, the fitting room is in the back on the right."
+      },
+      {
+        "speaker": "you",
+        "spanish": "Me queda bien. ¿Cuánto sale?",
+        "english": "It fits well. How much is it?",
+        "options": [
+          "¿Hacen descuento? (Do you give a discount?)",
+          "¿Aceptan tarjeta? (Do you accept card?)",
+          "Me la llevo (I'll take it)"
+        ]
+      },
+      {
+        "speaker": "other",
+        "spanish": "8.000 pesos. ¿Efectivo o tarjeta?",
+        "english": "8,000 pesos. Cash or card?"
+      },
+      {
+        "speaker": "you",
+        "spanish": "Tarjeta, por favor.",
+        "english": "Card, please.",
+        "options": [
+          "¿Tienen bolsa? (Do you have a bag?)",
+          "Gracias, está buenísima (Thanks, it's great)",
+          "¿Puedo pagar en cuotas? (Can I pay in installments?)"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "At the pharmacy",
+    "description": "Buy medicine or ask for help at a pharmacy",
+    "category": "other",
+    "difficulty": "intermediate",
+    "tags": ["pharmacy", "health", "medicine"],
+    "dialog": [
+      {
+        "speaker": "you",
+        "spanish": "Hola, buenas. Necesito algo para el dolor de cabeza.",
+        "english": "Hi, hello. I need something for a headache."
+      },
+      {
+        "speaker": "other",
+        "spanish": "Sí, te puedo dar ibuprofeno o paracetamol. ¿Cuál preferís?",
+        "english": "Yes, I can give you ibuprofen or paracetamol. Which do you prefer?"
+      },
+      {
+        "speaker": "you",
+        "spanish": "Ibuprofeno, por favor. ¿De 600?",
+        "english": "Ibuprofen, please. 600mg?",
+        "options": [
+          "¿Cuál es más fuerte? (Which is stronger?)",
+          "¿Tienen algo más suave? (Do you have something milder?)",
+          "¿Necesito receta? (Do I need a prescription?)"
+        ]
+      },
+      {
+        "speaker": "other",
+        "spanish": "Sí, acá tenés. Son 2.500 pesos.",
+        "english": "Yes, here you go. It's 2,500 pesos."
+      },
+      {
+        "speaker": "you",
+        "spanish": "Dale. ¿También tienen protector solar?",
+        "english": "Okay. Do you also have sunscreen?",
+        "options": [
+          "¿Tienen antihistamínicos? (Do you have antihistamines?)",
+          "¿Dónde están las curitas? (Where are the band-aids?)",
+          "¿Tienen repelente de mosquitos? (Do you have mosquito repellent?)"
+        ]
+      },
+      {
+        "speaker": "other",
+        "spanish": "Sí, ahí al fondo. ¿Necesitás algo más?",
+        "english": "Yes, over there in the back. Do you need anything else?"
+      },
+      {
+        "speaker": "you",
+        "spanish": "No, eso es todo. Gracias.",
+        "english": "No, that's all. Thanks.",
+        "options": [
+          "¿Cuánto es todo junto? (How much is everything together?)",
+          "¿Tienen descuento? (Do you have a discount?)",
+          "Perfecto, gracias (Perfect, thanks)"
+        ]
+      }
+    ]
   }
 ]
