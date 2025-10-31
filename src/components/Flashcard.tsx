@@ -105,14 +105,14 @@ export default function Flashcard({
                   {english}
                 </h2>
                 {context && (
-                  <p className="text-lg text-purple-100 text-center max-w-lg italic">
+                  <p className="text-lg text-white text-center max-w-lg italic">
                     {context}
                   </p>
                 )}
               </div>
 
               {/* Spanish reminder */}
-              <div className="text-center text-purple-200 text-sm">
+              <div className="text-center text-white/80 text-sm">
                 {spanish}
               </div>
             </div>

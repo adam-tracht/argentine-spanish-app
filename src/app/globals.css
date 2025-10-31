@@ -2,7 +2,7 @@
 @import "../styles/design-tokens.css";
 
 :root {
-  --background: #ffffff;
+  --background: #f9fafb;
   --foreground: #111827;
 }
 

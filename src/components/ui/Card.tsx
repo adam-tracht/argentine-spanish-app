@@ -17,7 +17,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
     ref
   ) => {
     const baseStyles =
-      'bg-white rounded-xl shadow-sm transition-shadow duration-200';
+      'bg-white rounded-xl shadow-md border border-gray-300 transition-shadow duration-200';
 
     const paddingStyles = {
       none: '',
@@ -26,7 +26,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
       lg: 'p-8',
     };
 
-    const hoverStyle = hover ? 'hover:shadow-md' : '';
+    const hoverStyle = hover ? 'hover:shadow-lg' : '';
 
     return (
       <div
