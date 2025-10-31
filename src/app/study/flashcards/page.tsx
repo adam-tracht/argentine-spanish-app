@@ -116,7 +116,7 @@ export default function FlashcardsPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-xl text-gray-600">Loading flashcards...</div>
       </div>
     );
@@ -131,7 +131,7 @@ export default function FlashcardsPage() {
   const progress = ((sessionStats.reviewed / sessionStats.total) * 100) || 0;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
@@ -160,7 +160,7 @@ export default function FlashcardsPage() {
               Study vocabulary with spaced repetition
             </p>
 
-            <Card padding="lg" className="mb-6">
+            <Card padding="lg" className="mb-6 border border-gray-200">
               <h2 className="text-xl font-semibold text-gray-900 mb-6">
                 Session Settings
               </h2>
@@ -209,7 +209,7 @@ export default function FlashcardsPage() {
             </Card>
 
             {/* Instructions */}
-            <Card padding="md" className="bg-blue-50 border border-blue-100">
+            <Card padding="md" className="bg-gray-50 border border-gray-200">
               <h3 className="font-semibold text-gray-900 mb-4">
                 How it works:
               </h3>
@@ -246,7 +246,7 @@ export default function FlashcardsPage() {
         {/* Session Complete */}
         {!sessionStarted && !showSettings && (
           <div className="max-w-2xl mx-auto text-center">
-            <Card padding="lg">
+            <Card padding="lg" className="border border-gray-200">
               <h2 className="text-3xl font-bold text-gray-900 mb-3">
                 Session Complete! 🎉
               </h2>
@@ -316,7 +316,7 @@ export default function FlashcardsPage() {
 
             {/* Session Stats */}
             <div className="max-w-2xl mx-auto mt-8">
-              <Card padding="md">
+              <Card padding="md" className="border border-gray-200">
                 <div className="flex justify-around text-sm">
                   <div className="text-center">
                     <div className="text-2xl text-blue-600 font-semibold mb-1">
