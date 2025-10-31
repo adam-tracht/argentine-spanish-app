@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
+import { authOptions } from '@/lib/auth';
 import { db } from '@/lib/db';
 import { vocabulary, users, userProgress } from '@/../drizzle/schema';
 import { eq, ilike, or, and, inArray, notInArray, sql } from 'drizzle-orm';
@@ -50,7 +51,7 @@ export async function GET(request: Request) {
 
     // Filter out known cards if user is logged in and excludeKnown=true
     if (excludeKnown) {
-      const session = await getServerSession();
+      const session = await getServerSession(authOptions);
       if (session?.user?.email) {
         // Get user ID
         const user = await db.query.users.findFirst({
