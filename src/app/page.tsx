@@ -103,7 +103,7 @@ export default function Home() {
               href={mode.href}
               className="group block"
             >
-              <Card hover padding="none" className="overflow-hidden h-full">
+              <Card hover padding="none" className="overflow-hidden h-full shadow-xl">
                 <div className={`bg-gradient-to-br ${mode.color} p-8 flex justify-center`}>
                   <span className="text-6xl">{mode.icon}</span>
                 </div>
@@ -119,7 +119,7 @@ export default function Home() {
         </div>
 
         {/* Features Section */}
-        <Card padding="lg" className="mb-16">
+        <Card padding="lg" className="mb-16 shadow-xl">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">
             What You'll Learn
           </h3>
@@ -173,7 +173,7 @@ export default function Home() {
 
         {/* Stats Preview (if logged in) */}
         {session && (
-          <Card padding="lg" className="bg-blue-50">
+          <Card padding="lg" className="bg-blue-50 shadow-xl">
             <h3 className="text-2xl font-bold text-gray-900 mb-8">Your Progress</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
@@ -201,7 +201,7 @@ export default function Home() {
 
         {/* CTA for non-logged in users */}
         {!session && status !== 'loading' && (
-          <Card padding="lg" className="text-center bg-blue-50">
+          <Card padding="lg" className="text-center bg-blue-50 shadow-xl">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h3>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
               Sign in to track your progress, save custom vocab, and unlock personalized learning
