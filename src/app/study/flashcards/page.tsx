@@ -37,7 +37,8 @@ export default function FlashcardsPage() {
 
   useEffect(() => {
     fetchVocabulary();
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [excludeKnown]);
 
   const fetchVocabulary = async () => {
     try {
@@ -256,10 +257,7 @@ export default function FlashcardsPage() {
                   type="checkbox"
                   id="excludeKnown"
                   checked={excludeKnown}
-                  onChange={(e) => {
-                    setExcludeKnown(e.target.checked);
-                    fetchVocabulary();
-                  }}
+                  onChange={(e) => setExcludeKnown(e.target.checked)}
                   className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
                 />
                 <label htmlFor="excludeKnown" className="ml-2 text-sm font-medium text-gray-700">
