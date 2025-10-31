@@ -220,6 +220,14 @@ export default function Home() {
           <p className="text-sm mt-2 text-gray-500">
             Perfect for dating, socializing, and navigating Buenos Aires
           </p>
+          <div className="mt-4">
+            <Link
+              href="/admin/add-vocab"
+              className="text-sm text-blue-600 hover:text-blue-700 underline"
+            >
+              Add Vocabulary
+            </Link>
+          </div>
         </div>
       </footer>
     </div>
