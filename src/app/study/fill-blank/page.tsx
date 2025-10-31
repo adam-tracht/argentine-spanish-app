@@ -15,24 +15,16 @@ interface Verb {
   isIrregular: boolean | null;
 }
 
-interface Vocabulary {
-  id: number;
-  spanish: string;
-  english: string;
-  context: string | null;
-}
-
 interface Question {
   sentence: string;
   answer: string;
   hint: string;
-  type: 'verb' | 'vocab';
-  originalItem: Verb | Vocabulary;
+  type: 'verb';
+  originalItem: Verb;
 }
 
 export default function FillBlankPage() {
   const [verbs, setVerbs] = useState<Verb[]>([]);
-  const [vocabulary, setVocabulary] = useState<Vocabulary[]>([]);
   const [loading, setLoading] = useState(true);
   const [exerciseStarted, setExerciseStarted] = useState(false);
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -44,7 +36,6 @@ export default function FillBlankPage() {
   const [exerciseComplete, setExerciseComplete] = useState(false);
 
   // Settings
-  const [exerciseType, setExerciseType] = useState<'verbs' | 'vocab' | 'mixed'>('mixed');
   const [questionCount, setQuestionCount] = useState(10);
 
   useEffect(() => {
@@ -53,14 +44,9 @@ export default function FillBlankPage() {
 
   const fetchData = async () => {
     try {
-      const [verbsRes, vocabRes] = await Promise.all([
-        fetch('/api/verbs'),
-        fetch('/api/vocabulary'),
-      ]);
+      const verbsRes = await fetch('/api/verbs');
       const verbsData = await verbsRes.json();
-      const vocabData = await vocabRes.json();
       setVerbs(verbsData);
-      setVocabulary(vocabData);
     } catch (error) {
       console.error('Error fetching data:', error);
     } finally {
@@ -124,45 +110,13 @@ export default function FillBlankPage() {
     };
   };
 
-  const generateVocabQuestion = (vocab: Vocabulary): Question => {
-    // Create a sentence using the vocab
-    const templates = [
-      `Me gusta mucho ______ (${vocab.english})`,
-      `¿Dónde está ______? (${vocab.english})`,
-      `Necesito ______ (${vocab.english})`,
-      `¿Querés ______? (${vocab.english})`,
-    ];
-
-    const template = templates[Math.floor(Math.random() * templates.length)];
-
-    return {
-      sentence: template,
-      answer: vocab.spanish,
-      hint: vocab.english,
-      type: 'vocab',
-      originalItem: vocab,
-    };
-  };
-
   const generateQuestions = (): Question[] => {
-    const questions: Question[] = [];
+    const verbQuestions = shuffleArray(verbs)
+      .slice(0, questionCount)
+      .map(generateVerbQuestion)
+      .filter((q): q is Question => q !== null);
 
-    if (exerciseType === 'verbs' || exerciseType === 'mixed') {
-      const verbQuestions = shuffleArray(verbs)
-        .slice(0, exerciseType === 'verbs' ? questionCount : Math.ceil(questionCount / 2))
-        .map(generateVerbQuestion)
-        .filter((q): q is Question => q !== null);
-      questions.push(...verbQuestions);
-    }
-
-    if (exerciseType === 'vocab' || exerciseType === 'mixed') {
-      const vocabQuestions = shuffleArray(vocabulary)
-        .slice(0, exerciseType === 'vocab' ? questionCount : Math.floor(questionCount / 2))
-        .map(generateVocabQuestion);
-      questions.push(...vocabQuestions);
-    }
-
-    return shuffleArray(questions).slice(0, questionCount);
+    return verbQuestions.slice(0, questionCount);
   };
 
   const startExercise = () => {
@@ -264,32 +218,16 @@ export default function FillBlankPage() {
         {!exerciseStarted && !exerciseComplete && (
           <div>
             <h1 className="text-4xl font-bold text-gray-900 mb-2 text-center">
-              Fill in the Blank
+              Verb Conjugation Practice
             </h1>
             <p className="text-lg text-gray-600 mb-8 text-center">
-              Complete sentences by filling in the missing word
+              Fill in the blank with the correct verb conjugation
             </p>
 
             <div className="bg-white rounded-xl shadow-md p-8 mb-6 max-w-2xl mx-auto">
               <h2 className="text-xl font-semibold text-gray-900 mb-4">
                 Exercise Settings
               </h2>
-
-              {/* Exercise Type */}
-              <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Exercise Type
-                </label>
-                <select
-                  value={exerciseType}
-                  onChange={(e) => setExerciseType(e.target.value as any)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
-                  <option value="mixed">Mixed (Verbs + Vocabulary)</option>
-                  <option value="verbs">Verbs Only (Conjugation Practice)</option>
-                  <option value="vocab">Vocabulary Only</option>
-                </select>
-              </div>
 
               {/* Question Count */}
               <div className="mb-6">
@@ -323,13 +261,13 @@ export default function FillBlankPage() {
             <div className="bg-blue-50 rounded-lg p-6 max-w-2xl mx-auto">
               <h3 className="font-semibold text-gray-900 mb-3">How it works:</h3>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li>1. Read the sentence with the blank (______)</li>
-                <li>2. Type the missing word in Spanish</li>
-                <li>3. Use the hint to help you remember</li>
+                <li>1. Read the Spanish sentence with a blank (______)</li>
+                <li>2. Look at the hint to see which verb and tense to use</li>
+                <li>3. Type the correct verb conjugation</li>
                 <li>4. Press Enter or click "Check Answer"</li>
-                <li>5. See if you got it right and learn from mistakes!</li>
+                <li>5. Practice Argentine vos conjugations and get instant feedback!</li>
                 <li className="mt-3 text-xs text-gray-600">
-                  💡 Tip: Accents don't matter - "esta" and "está" are both accepted
+                  💡 Tip: Accents don't matter - "tenes" and "tenés" are both accepted
                 </li>
               </ul>
             </div>

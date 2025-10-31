@@ -24,8 +24,8 @@ export default function Home() {
       color: 'from-emerald-500 to-emerald-600',
     },
     {
-      title: 'Fill in the Blank',
-      description: 'Complete sentences with the correct word',
+      title: 'Verb Conjugations',
+      description: 'Practice verb conjugations with fill-in-the-blank',
       href: '/study/fill-blank',
       icon: '📝',
       color: 'from-amber-500 to-amber-600',
