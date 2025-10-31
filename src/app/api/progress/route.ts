@@ -67,6 +67,7 @@ export async function POST(request: Request) {
   try {
     const session = await getServerSession(authOptions);
     if (!session?.user?.email) {
+      console.log('No session found');
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
@@ -76,11 +77,13 @@ export async function POST(request: Request) {
     });
 
     if (!user) {
+      console.log('User not found in database:', session.user.email);
       return NextResponse.json({ error: 'User not found' }, { status: 404 });
     }
 
     const body = await request.json();
     const { vocabId, verbId, isKnown, wasCorrect } = body;
+    console.log('Saving progress for user:', user.email, 'vocabId:', vocabId, 'isKnown:', isKnown);
 
     if (!vocabId && !verbId) {
       return NextResponse.json({ error: 'vocabId or verbId required' }, { status: 400 });
@@ -138,6 +141,7 @@ export async function POST(request: Request) {
         .set(updates)
         .where(eq(schema.userProgress.id, existingProgress.id));
 
+      console.log('Updated progress for vocabId:', vocabId, 'isKnown:', updates.isKnown);
       return NextResponse.json({ success: true, updated: true });
     } else {
       // Create new progress entry
@@ -160,6 +164,7 @@ export async function POST(request: Request) {
 
       await db.insert(schema.userProgress).values(newProgress);
 
+      console.log('Created new progress for vocabId:', vocabId, 'isKnown:', newProgress.isKnown);
       return NextResponse.json({ success: true, created: true });
     }
   } catch (error) {
