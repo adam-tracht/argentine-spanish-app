@@ -44,13 +44,6 @@ export default function Home() {
       icon: '📚',
       color: 'from-rose-500 to-rose-600',
     },
-    {
-      title: 'Dashboard',
-      description: 'Track your progress and stats',
-      href: '/dashboard',
-      icon: '📊',
-      color: 'from-indigo-500 to-indigo-600',
-    },
   ];
 
   return (
@@ -171,31 +164,18 @@ export default function Home() {
           </div>
         </Card>
 
-        {/* Stats Preview (if logged in) */}
+        {/* Add vocab CTA (if logged in) */}
         {session && (
-          <Card padding="lg" className="bg-blue-50 shadow-xl">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Your Progress</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">0</div>
-                <div className="text-gray-600 text-sm">Cards Reviewed</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">0</div>
-                <div className="text-gray-600 text-sm">Day Streak</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">0</div>
-                <div className="text-gray-600 text-sm">Words Mastered</div>
-              </div>
-            </div>
-            <div className="mt-8 text-center">
-              <Link href="/dashboard">
-                <Button variant="primary" size="lg">
-                  View Full Dashboard
-                </Button>
-              </Link>
-            </div>
+          <Card padding="lg" className="text-center bg-blue-50 shadow-xl">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Add Custom Vocabulary</h3>
+            <p className="text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+              Add your own words and phrases to practice alongside the built-in vocabulary
+            </p>
+            <Link href="/admin/add-vocab">
+              <Button variant="primary" size="lg">
+                Add Vocabulary
+              </Button>
+            </Link>
           </Card>
         )}
 
@@ -204,7 +184,7 @@ export default function Home() {
           <Card padding="lg" className="text-center bg-blue-50 shadow-xl">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h3>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Sign in to track your progress, save custom vocab, and unlock personalized learning
+              Sign in to save your progress and add custom vocab
             </p>
             <Button variant="primary" size="lg" onClick={() => signIn()}>
               Sign In to Start Learning
@@ -220,14 +200,6 @@ export default function Home() {
           <p className="text-sm mt-2 text-gray-500">
             Perfect for dating, socializing, and navigating Buenos Aires
           </p>
-          <div className="mt-4">
-            <Link
-              href="/admin/add-vocab"
-              className="text-sm text-blue-600 hover:text-blue-700 underline"
-            >
-              Add Vocabulary
-            </Link>
-          </div>
         </div>
       </footer>
     </div>
