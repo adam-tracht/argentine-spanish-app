@@ -44,6 +44,14 @@ export default function Home() {
       icon: '📚',
       color: 'from-rose-500 to-rose-600',
     },
+    {
+      title: 'Add Vocabulary',
+      description: 'Add your own custom words and phrases',
+      href: '/admin/add-vocab',
+      icon: '➕',
+      color: 'from-teal-500 to-teal-600',
+      requiresAuth: true,
+    },
   ];
 
   return (
@@ -90,25 +98,36 @@ export default function Home() {
 
         {/* Study Mode Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {studyModes.map((mode) => (
-            <Link
-              key={mode.href}
-              href={mode.href}
-              className="group block"
-            >
-              <Card hover padding="none" className="overflow-hidden h-full shadow-xl">
-                <div className={`bg-gradient-to-br ${mode.color} p-8 flex justify-center`}>
-                  <span className="text-6xl">{mode.icon}</span>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600">
-                    {mode.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{mode.description}</p>
-                </div>
-              </Card>
-            </Link>
-          ))}
+          {studyModes.map((mode) => {
+            const isLocked = mode.requiresAuth && !session;
+            const CardWrapper = isLocked ? 'div' : Link;
+            const wrapperProps = isLocked
+              ? { className: "group block cursor-not-allowed relative" }
+              : { href: mode.href, className: "group block" };
+
+            return (
+              <CardWrapper key={mode.href} {...wrapperProps as any}>
+                <Card
+                  hover={!isLocked}
+                  padding="none"
+                  className={`overflow-hidden h-full shadow-xl ${isLocked ? 'opacity-60' : ''}`}
+                >
+                  <div className={`bg-gradient-to-br ${mode.color} p-8 flex justify-center ${isLocked ? 'grayscale' : ''}`}>
+                    <span className="text-6xl">{mode.icon}</span>
+                  </div>
+                  <div className="p-6">
+                    <h3 className={`text-xl font-semibold mb-2 ${isLocked ? 'text-gray-500' : 'text-gray-900 group-hover:text-blue-600'}`}>
+                      {mode.title}
+                      {isLocked && <span className="ml-2 text-sm">🔒</span>}
+                    </h3>
+                    <p className={`text-sm leading-relaxed ${isLocked ? 'text-gray-500' : 'text-gray-600'}`}>
+                      {isLocked ? 'Sign in to add custom vocabulary' : mode.description}
+                    </p>
+                  </div>
+                </Card>
+              </CardWrapper>
+            );
+          })}
         </div>
 
         {/* Features Section */}
@@ -163,21 +182,6 @@ export default function Home() {
             </div>
           </div>
         </Card>
-
-        {/* Add vocab CTA (if logged in) */}
-        {session && (
-          <Card padding="lg" className="text-center bg-blue-50 shadow-xl">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Add Custom Vocabulary</h3>
-            <p className="text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Add your own words and phrases to practice alongside the built-in vocabulary
-            </p>
-            <Link href="/admin/add-vocab">
-              <Button variant="primary" size="lg">
-                Add Vocabulary
-              </Button>
-            </Link>
-          </Card>
-        )}
 
         {/* CTA for non-logged in users */}
         {!session && status !== 'loading' && (
