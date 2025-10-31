@@ -41,6 +41,7 @@ export default function FlashcardsPage() {
   }, [excludeKnown]);
 
   const fetchVocabulary = async () => {
+    setLoading(true);
     try {
       const response = await fetch(`/api/vocabulary?excludeKnown=${excludeKnown}`);
       const data = await response.json();
