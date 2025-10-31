@@ -14,47 +14,47 @@ export default function Home() {
       description: 'Swipeable cards with spaced repetition',
       href: '/study/flashcards',
       icon: '🃏',
-      color: 'bg-blue-500',
+      color: 'from-blue-500 to-blue-600',
     },
     {
       title: 'Quiz',
       description: 'Multiple choice questions to test your knowledge',
       href: '/study/quiz',
       icon: '✅',
-      color: 'bg-green-500',
+      color: 'from-emerald-500 to-emerald-600',
     },
     {
       title: 'Fill in the Blank',
       description: 'Complete sentences with the correct word',
       href: '/study/fill-blank',
       icon: '📝',
-      color: 'bg-yellow-500',
+      color: 'from-amber-500 to-amber-600',
     },
     {
       title: 'Conversations',
       description: 'Interactive dialogues for real-world scenarios',
       href: '/study/scenarios',
       icon: '💬',
-      color: 'bg-purple-500',
+      color: 'from-purple-500 to-purple-600',
     },
     {
       title: 'Verb Tables',
       description: 'Browse and practice verb conjugations',
       href: '/verbs',
       icon: '📚',
-      color: 'bg-pink-500',
+      color: 'from-rose-500 to-rose-600',
     },
     {
       title: 'Dashboard',
       description: 'Track your progress and stats',
       href: '/dashboard',
       icon: '📊',
-      color: 'bg-indigo-500',
+      color: 'from-indigo-500 to-indigo-600',
     },
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
@@ -104,7 +104,7 @@ export default function Home() {
               className="group block"
             >
               <Card hover padding="none" className="overflow-hidden h-full">
-                <div className="p-8 flex justify-center bg-gray-100">
+                <div className={`bg-gradient-to-br ${mode.color} p-8 flex justify-center`}>
                   <span className="text-6xl">{mode.icon}</span>
                 </div>
                 <div className="p-6">
@@ -173,7 +173,7 @@ export default function Home() {
 
         {/* Stats Preview (if logged in) */}
         {session && (
-          <Card padding="lg" className="bg-gray-100">
+          <Card padding="lg" className="bg-blue-50">
             <h3 className="text-2xl font-bold text-gray-900 mb-8">Your Progress</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
@@ -201,7 +201,7 @@ export default function Home() {
 
         {/* CTA for non-logged in users */}
         {!session && status !== 'loading' && (
-          <Card padding="lg" className="text-center bg-gray-100">
+          <Card padding="lg" className="text-center bg-blue-50">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h3>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
               Sign in to track your progress, save custom vocab, and unlock personalized learning

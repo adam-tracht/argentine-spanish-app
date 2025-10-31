@@ -116,7 +116,7 @@ export default function FlashcardsPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-xl text-gray-600">Loading flashcards...</div>
       </div>
     );
@@ -131,7 +131,7 @@ export default function FlashcardsPage() {
   const progress = ((sessionStats.reviewed / sessionStats.total) * 100) || 0;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
@@ -209,7 +209,7 @@ export default function FlashcardsPage() {
             </Card>
 
             {/* Instructions */}
-            <Card padding="md" className="bg-gray-100">
+            <Card padding="md" className="bg-blue-50">
               <h3 className="font-semibold text-gray-900 mb-4">
                 How it works:
               </h3>
