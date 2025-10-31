@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
+import { getServerSession } from 'next-auth';
 import { db } from '@/lib/db';
-import { vocabulary } from '@/../drizzle/schema';
-import { eq, ilike, or, and, inArray } from 'drizzle-orm';
+import { vocabulary, users, userProgress } from '@/../drizzle/schema';
+import { eq, ilike, or, and, inArray, notInArray, sql } from 'drizzle-orm';
 
 export async function GET(request: Request) {
   try {
@@ -10,6 +11,7 @@ export async function GET(request: Request) {
     const category = searchParams.get('category');
     const difficulty = searchParams.get('difficulty');
     const tags = searchParams.get('tags')?.split(',');
+    const excludeKnown = searchParams.get('excludeKnown') === 'true';
 
     let conditions = [];
 
@@ -37,17 +39,49 @@ export async function GET(request: Request) {
       ? db.select().from(vocabulary).where(and(...conditions) as any)
       : db.select().from(vocabulary);
 
-    const results = await query;
+    let results = await query;
 
     // Filter by tags if provided (tags are stored as array in DB)
-    let filteredResults = results;
     if (tags && tags.length > 0) {
-      filteredResults = results.filter(item =>
+      results = results.filter(item =>
         item.tags && tags.some(tag => item.tags?.includes(tag))
       );
     }
 
-    return NextResponse.json(filteredResults);
+    // Filter out known cards if user is logged in and excludeKnown=true
+    if (excludeKnown) {
+      const session = await getServerSession();
+      if (session?.user?.email) {
+        // Get user ID
+        const user = await db.query.users.findFirst({
+          where: eq(users.email, session.user.email),
+        });
+
+        if (user) {
+          // Get all known vocab IDs for this user
+          const knownProgress = await db.query.userProgress.findMany({
+            where: and(
+              eq(userProgress.userId, user.id),
+              eq(userProgress.isKnown, true)
+            ),
+            columns: {
+              vocabId: true,
+            },
+          });
+
+          const knownVocabIds = knownProgress
+            .map(p => p.vocabId)
+            .filter(id => id !== null) as number[];
+
+          // Filter out known vocabulary
+          if (knownVocabIds.length > 0) {
+            results = results.filter(item => !knownVocabIds.includes(item.id));
+          }
+        }
+      }
+    }
+
+    return NextResponse.json(results);
   } catch (error) {
     console.error('Error fetching vocabulary:', error);
     return NextResponse.json(

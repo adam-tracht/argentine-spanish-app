@@ -35,6 +35,7 @@ export default function QuizPage() {
   const [difficultyFilter, setDifficultyFilter] = useState('all');
   const [questionCount, setQuestionCount] = useState(10);
   const [quizMode, setQuizMode] = useState<'spanish-to-english' | 'english-to-spanish'>('spanish-to-english');
+  const [excludeKnown, setExcludeKnown] = useState(true);
 
   useEffect(() => {
     fetchVocabulary();
@@ -42,7 +43,7 @@ export default function QuizPage() {
 
   const fetchVocabulary = async () => {
     try {
-      const response = await fetch('/api/vocabulary');
+      const response = await fetch(`/api/vocabulary?excludeKnown=${excludeKnown}`);
       const data = await response.json();
       setVocabulary(data);
     } catch (error) {
@@ -106,7 +107,7 @@ export default function QuizPage() {
     setSelectedAnswer(answer);
   };
 
-  const submitAnswer = () => {
+  const submitAnswer = async () => {
     if (!selectedAnswer) return;
 
     const currentQuestion = questions[currentQuestionIndex];
@@ -114,6 +115,20 @@ export default function QuizPage() {
 
     if (isCorrect) {
       setScore(score + 1);
+    }
+
+    // Track progress in database
+    try {
+      await fetch('/api/progress', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          vocabId: currentQuestion.vocab.id,
+          wasCorrect: isCorrect,
+        }),
+      });
+    } catch (error) {
+      console.error('Error tracking progress:', error);
     }
 
     setShowResult(true);
@@ -126,6 +141,37 @@ export default function QuizPage() {
       setShowResult(false);
     } else {
       setQuizComplete(true);
+    }
+  };
+
+  const handleMarkAsKnown = async () => {
+    const currentQuestion = questions[currentQuestionIndex];
+    if (!currentQuestion) return;
+
+    try {
+      await fetch('/api/progress', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          vocabId: currentQuestion.vocab.id,
+          isKnown: true,
+        }),
+      });
+
+      // Remove from current quiz
+      const newQuestions = questions.filter((_, idx) => idx !== currentQuestionIndex);
+      setQuestions(newQuestions);
+
+      // If no more questions, end quiz
+      if (newQuestions.length === 0 || currentQuestionIndex >= newQuestions.length) {
+        setQuizComplete(true);
+      } else {
+        // Stay on same index (which now shows next question)
+        setSelectedAnswer(null);
+        setShowResult(false);
+      }
+    } catch (error) {
+      console.error('Error marking as known:', error);
     }
   };
 
@@ -251,7 +297,7 @@ export default function QuizPage() {
               </div>
 
               {/* Question Count */}
-              <div className="mb-6">
+              <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Number of Questions: {questionCount}
                 </label>
@@ -268,6 +314,23 @@ export default function QuizPage() {
                   <span>5</span>
                   <span>50</span>
                 </div>
+              </div>
+
+              {/* Exclude Known Toggle */}
+              <div className="mb-6 flex items-center">
+                <input
+                  type="checkbox"
+                  id="excludeKnown"
+                  checked={excludeKnown}
+                  onChange={(e) => {
+                    setExcludeKnown(e.target.checked);
+                    fetchVocabulary();
+                  }}
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                />
+                <label htmlFor="excludeKnown" className="ml-2 text-sm font-medium text-gray-700">
+                  Hide words I've mastered
+                </label>
               </div>
 
               <button
@@ -431,6 +494,16 @@ export default function QuizPage() {
                   </button>
                 )}
               </div>
+            </div>
+
+            {/* Mark as Known Button */}
+            <div className="text-center mt-4">
+              <button
+                onClick={handleMarkAsKnown}
+                className="text-sm text-gray-600 hover:text-gray-900 underline"
+              >
+                ✓ I've mastered this word - don't show it again
+              </button>
             </div>
           </div>
         )}

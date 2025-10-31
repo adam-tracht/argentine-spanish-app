@@ -33,6 +33,7 @@ export default function FlashcardsPage() {
   const [difficultyFilter, setDifficultyFilter] = useState('all');
   const [showSettings, setShowSettings] = useState(true);
   const [sessionStarted, setSessionStarted] = useState(false);
+  const [excludeKnown, setExcludeKnown] = useState(true);
 
   useEffect(() => {
     fetchVocabulary();
@@ -40,7 +41,7 @@ export default function FlashcardsPage() {
 
   const fetchVocabulary = async () => {
     try {
-      const response = await fetch('/api/vocabulary');
+      const response = await fetch(`/api/vocabulary?excludeKnown=${excludeKnown}`);
       const data = await response.json();
       setVocabulary(shuffleArray(data));
       setSessionStats((prev) => ({ ...prev, total: data.length }));
@@ -90,12 +91,27 @@ export default function FlashcardsPage() {
     setShowSettings(false);
   };
 
-  const handleRate = (rating: 'easy' | 'good' | 'hard' | 'again') => {
+  const handleRate = async (rating: 'easy' | 'good' | 'hard' | 'again') => {
     setSessionStats((prev) => ({
       ...prev,
       reviewed: prev.reviewed + 1,
       [rating]: prev[rating] + 1,
     }));
+
+    // Track progress in database
+    const wasCorrect = rating === 'easy' || rating === 'good';
+    try {
+      await fetch('/api/progress', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          vocabId: currentCard.id,
+          wasCorrect,
+        }),
+      });
+    } catch (error) {
+      console.error('Error tracking progress:', error);
+    }
 
     // Move to next card
     if (currentIndex < vocabulary.length - 1) {
@@ -104,6 +120,37 @@ export default function FlashcardsPage() {
       // Session complete
       setSessionStarted(false);
       setShowSettings(true);
+    }
+  };
+
+  const handleMarkAsKnown = async () => {
+    if (!currentCard) return;
+
+    try {
+      await fetch('/api/progress', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          vocabId: currentCard.id,
+          isKnown: true,
+        }),
+      });
+
+      // Remove from current session
+      const newVocab = vocabulary.filter((_, idx) => idx !== currentIndex);
+      setVocabulary(newVocab);
+      setSessionStats((prev) => ({
+        ...prev,
+        total: newVocab.length,
+      }));
+
+      // If no more cards, end session
+      if (newVocab.length === 0 || currentIndex >= newVocab.length) {
+        setSessionStarted(false);
+        setShowSettings(true);
+      }
+    } catch (error) {
+      console.error('Error marking as known:', error);
     }
   };
 
@@ -185,7 +232,7 @@ export default function FlashcardsPage() {
               </div>
 
               {/* Difficulty Filter */}
-              <div className="mb-6">
+              <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Difficulty
                 </label>
@@ -201,6 +248,23 @@ export default function FlashcardsPage() {
                     </option>
                   ))}
                 </select>
+              </div>
+
+              {/* Exclude Known Toggle */}
+              <div className="mb-6 flex items-center">
+                <input
+                  type="checkbox"
+                  id="excludeKnown"
+                  checked={excludeKnown}
+                  onChange={(e) => {
+                    setExcludeKnown(e.target.checked);
+                    fetchVocabulary();
+                  }}
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                />
+                <label htmlFor="excludeKnown" className="ml-2 text-sm font-medium text-gray-700">
+                  Hide cards I've mastered
+                </label>
               </div>
 
               <Button variant="primary" size="lg" fullWidth onClick={startSession}>
@@ -313,6 +377,16 @@ export default function FlashcardsPage() {
               tags={currentCard.tags}
               onRate={handleRate}
             />
+
+            {/* Mark as Known Button */}
+            <div className="max-w-2xl mx-auto mt-6 text-center">
+              <button
+                onClick={handleMarkAsKnown}
+                className="text-sm text-gray-600 hover:text-gray-900 underline"
+              >
+                ✓ I've mastered this card - don't show it again
+              </button>
+            </div>
 
             {/* Session Stats */}
             <div className="max-w-2xl mx-auto mt-8">
