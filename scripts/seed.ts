@@ -26,14 +26,12 @@ async function seed() {
     for (const verb of verbsData) {
       await db.insert(schema.verbs).values({
         infinitive: verb.infinitive,
-        presenteVos: verb.presenteVos,
-        pasadoVos: verb.pasadoVos,
-        presenteYo: verb.presenteYo,
-        pasadoYo: verb.pasadoYo,
         english: verb.english,
-        exampleSpanish: verb.exampleSpanish,
-        isIrregular: verb.isIrregular,
-        category: verb.category,
+        conjugations: verb.conjugations as any,
+        exampleSpanish: verb.exampleSpanish || null,
+        exampleEnglish: verb.exampleEnglish || null,
+        isIrregular: verb.isIrregular || false,
+        category: verb.category || null,
       });
     }
     console.log(`✅ Seeded ${verbsData.length} verbs`);
