@@ -8,6 +8,13 @@
       "when": 1762106706174,
       "tag": "0000_bright_ogun",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1762107931918,
+      "tag": "0001_unique_talos",
+      "breakpoints": true
     }
   ]
 }

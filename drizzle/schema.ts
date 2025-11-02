@@ -51,15 +51,17 @@ export const vocabulary = pgTable('vocabulary', {
 export const verbs = pgTable('verbs', {
   id: serial('id').primaryKey(),
   infinitive: text('infinitive').notNull().unique(),
-  presenteVos: text('presente_vos').notNull(),
-  pasadoVos: text('pasado_vos').notNull(),
-  presenteYo: text('presente_yo').notNull(),
-  pasadoYo: text('pasado_yo').notNull(),
   english: text('english').notNull(),
+
+  // Store conjugations as JSON object with structure:
+  // { presente: { yo: '...', vos: '...', el: '...', nosotros: '...', vosotros: '...', ellos: '...' }, ... }
+  conjugations: jsonb('conjugations').notNull(),
+
   exampleSpanish: text('example_spanish'),
   exampleEnglish: text('example_english'),
   isIrregular: boolean('is_irregular').default(false),
   category: text('category'), // e.g., 'essential', 'social', 'slang'
+  createdAt: timestamp('created_at').defaultNow().notNull(),
 });
 
 // Conversation scenarios table

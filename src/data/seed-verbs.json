@@ -1,507 +1,2301 @@
 [
   {
     "infinitive": "ser",
-    "presenteVos": "sos",
-    "pasadoVos": "fuiste",
-    "presenteYo": "soy",
-    "pasadoYo": "fui",
     "english": "to be",
+    "conjugations": {
+      "presente": {
+        "yo": "soy",
+        "vos": "sos",
+        "el": "es",
+        "nosotros": "somos",
+        "vosotros": "sois",
+        "ellos": "son"
+      },
+      "preterito": {
+        "yo": "fui",
+        "vos": "fuiste",
+        "el": "fue",
+        "nosotros": "fuimos",
+        "vosotros": "fuisteis",
+        "ellos": "fueron"
+      },
+      "imperfecto": {
+        "yo": "era",
+        "vos": "eras",
+        "el": "era",
+        "nosotros": "éramos",
+        "vosotros": "erais",
+        "ellos": "eran"
+      },
+      "futuro": {
+        "yo": "seré",
+        "vos": "serás",
+        "el": "será",
+        "nosotros": "seremos",
+        "vosotros": "seréis",
+        "ellos": "serán"
+      },
+      "condicional": {
+        "yo": "sería",
+        "vos": "serías",
+        "el": "sería",
+        "nosotros": "seríamos",
+        "vosotros": "seríais",
+        "ellos": "serían"
+      }
+    },
     "exampleSpanish": "Sos mi amigo / Soy de Buenos Aires",
+    "exampleEnglish": null,
     "isIrregular": true,
     "category": "essential"
   },
   {
     "infinitive": "estar",
-    "presenteVos": "estás",
-    "pasadoVos": "estuviste",
-    "presenteYo": "estoy",
-    "pasadoYo": "estuve",
     "english": "to be",
+    "conjugations": {
+      "presente": {
+        "yo": "estoy",
+        "vos": "estás",
+        "el": "está",
+        "nosotros": "estamos",
+        "vosotros": "estáis",
+        "ellos": "están"
+      },
+      "preterito": {
+        "yo": "estuve",
+        "vos": "estuviste",
+        "el": "estuvo",
+        "nosotros": "estuvimos",
+        "vosotros": "estuvisteis",
+        "ellos": "estuvieron"
+      },
+      "imperfecto": {
+        "yo": "estaba",
+        "vos": "estabas",
+        "el": "estaba",
+        "nosotros": "estábamos",
+        "vosotros": "estabais",
+        "ellos": "estaban"
+      },
+      "futuro": {
+        "yo": "estaré",
+        "vos": "estarás",
+        "el": "estará",
+        "nosotros": "estaremos",
+        "vosotros": "estaréis",
+        "ellos": "estarán"
+      },
+      "condicional": {
+        "yo": "estaría",
+        "vos": "estarías",
+        "el": "estaría",
+        "nosotros": "estaríamos",
+        "vosotros": "estaríais",
+        "ellos": "estarían"
+      }
+    },
     "exampleSpanish": "¿Dónde estás? / Estoy cansado",
+    "exampleEnglish": null,
     "isIrregular": true,
     "category": "essential"
   },
   {
     "infinitive": "tener",
-    "presenteVos": "tenés",
-    "pasadoVos": "tuviste",
-    "presenteYo": "tengo",
-    "pasadoYo": "tuve",
     "english": "to have",
+    "conjugations": {
+      "presente": {
+        "yo": "tengo",
+        "vos": "tenés",
+        "el": "tiene",
+        "nosotros": "tenemos",
+        "vosotros": "tenéis",
+        "ellos": "tienen"
+      },
+      "preterito": {
+        "yo": "tuve",
+        "vos": "tuviste",
+        "el": "tuvo",
+        "nosotros": "tuvimos",
+        "vosotros": "tuvisteis",
+        "ellos": "tuvieron"
+      },
+      "imperfecto": {
+        "yo": "tenía",
+        "vos": "tenías",
+        "el": "tenía",
+        "nosotros": "teníamos",
+        "vosotros": "teníais",
+        "ellos": "tenían"
+      },
+      "futuro": {
+        "yo": "tendré",
+        "vos": "tendrás",
+        "el": "tendrá",
+        "nosotros": "tendremos",
+        "vosotros": "tendréis",
+        "ellos": "tendrán"
+      },
+      "condicional": {
+        "yo": "tendría",
+        "vos": "tendrías",
+        "el": "tendría",
+        "nosotros": "tendríamos",
+        "vosotros": "tendríais",
+        "ellos": "tendrían"
+      }
+    },
     "exampleSpanish": "Tenés tiempo / Tengo hambre",
+    "exampleEnglish": null,
     "isIrregular": true,
     "category": "essential"
   },
   {
     "infinitive": "hacer",
-    "presenteVos": "hacés",
-    "pasadoVos": "hiciste",
-    "presenteYo": "hago",
-    "pasadoYo": "hice",
     "english": "to do / to make",
+    "conjugations": {
+      "presente": {
+        "yo": "hago",
+        "vos": "hacés",
+        "el": "hace",
+        "nosotros": "hacemos",
+        "vosotros": "hacéis",
+        "ellos": "hacen"
+      },
+      "preterito": {
+        "yo": "hice",
+        "vos": "hiciste",
+        "el": "hizo",
+        "nosotros": "hicimos",
+        "vosotros": "hicisteis",
+        "ellos": "hicieron"
+      },
+      "imperfecto": {
+        "yo": "hacía",
+        "vos": "hacías",
+        "el": "hacía",
+        "nosotros": "hacíamos",
+        "vosotros": "hacíais",
+        "ellos": "hacían"
+      },
+      "futuro": {
+        "yo": "haré",
+        "vos": "harás",
+        "el": "hará",
+        "nosotros": "haremos",
+        "vosotros": "haréis",
+        "ellos": "harán"
+      },
+      "condicional": {
+        "yo": "haría",
+        "vos": "harías",
+        "el": "haría",
+        "nosotros": "haríamos",
+        "vosotros": "haríais",
+        "ellos": "harían"
+      }
+    },
     "exampleSpanish": "¿Qué hacés? / Hice ejercicio",
+    "exampleEnglish": null,
     "isIrregular": true,
     "category": "essential"
   },
   {
     "infinitive": "decir",
-    "presenteVos": "decís",
-    "pasadoVos": "dijiste",
-    "presenteYo": "digo",
-    "pasadoYo": "dije",
     "english": "to say / to tell",
+    "conjugations": {
+      "presente": {
+        "yo": "digo",
+        "vos": "decís",
+        "el": "dice",
+        "nosotros": "decimos",
+        "vosotros": "decís",
+        "ellos": "dicen"
+      },
+      "preterito": {
+        "yo": "dije",
+        "vos": "dijiste",
+        "el": "dijo",
+        "nosotros": "dijimos",
+        "vosotros": "dijisteis",
+        "ellos": "dijeron"
+      },
+      "imperfecto": {
+        "yo": "decía",
+        "vos": "decías",
+        "el": "decía",
+        "nosotros": "decíamos",
+        "vosotros": "decíais",
+        "ellos": "decían"
+      },
+      "futuro": {
+        "yo": "diré",
+        "vos": "dirás",
+        "el": "dirá",
+        "nosotros": "diremos",
+        "vosotros": "diréis",
+        "ellos": "dirán"
+      },
+      "condicional": {
+        "yo": "diría",
+        "vos": "dirías",
+        "el": "diría",
+        "nosotros": "diríamos",
+        "vosotros": "diríais",
+        "ellos": "dirían"
+      }
+    },
     "exampleSpanish": "Me dijiste la verdad / Dije la verdad",
+    "exampleEnglish": null,
     "isIrregular": true,
     "category": "essential"
   },
   {
     "infinitive": "ir",
-    "presenteVos": "vas",
-    "pasadoVos": "fuiste",
-    "presenteYo": "voy",
-    "pasadoYo": "fui",
     "english": "to go",
+    "conjugations": {
+      "presente": {
+        "yo": "voy",
+        "vos": "vas",
+        "el": "va",
+        "nosotros": "vamos",
+        "vosotros": "vais",
+        "ellos": "van"
+      },
+      "preterito": {
+        "yo": "fui",
+        "vos": "fuiste",
+        "el": "fue",
+        "nosotros": "fuimos",
+        "vosotros": "fuisteis",
+        "ellos": "fueron"
+      },
+      "imperfecto": {
+        "yo": "iba",
+        "vos": "ibas",
+        "el": "iba",
+        "nosotros": "íbamos",
+        "vosotros": "ibais",
+        "ellos": "iban"
+      },
+      "futuro": {
+        "yo": "iré",
+        "vos": "irás",
+        "el": "irá",
+        "nosotros": "iremos",
+        "vosotros": "iréis",
+        "ellos": "irán"
+      },
+      "condicional": {
+        "yo": "iría",
+        "vos": "irías",
+        "el": "iría",
+        "nosotros": "iríamos",
+        "vosotros": "iríais",
+        "ellos": "irían"
+      }
+    },
     "exampleSpanish": "Vas al centro / Fui al centro",
+    "exampleEnglish": null,
     "isIrregular": true,
     "category": "essential"
   },
   {
     "infinitive": "venir",
-    "presenteVos": "venís",
-    "pasadoVos": "viniste",
-    "presenteYo": "vengo",
-    "pasadoYo": "vine",
     "english": "to come",
+    "conjugations": {
+      "presente": {
+        "yo": "vengo",
+        "vos": "venís",
+        "el": "viene",
+        "nosotros": "venimos",
+        "vosotros": "venís",
+        "ellos": "vienen"
+      },
+      "preterito": {
+        "yo": "vine",
+        "vos": "viniste",
+        "el": "vino",
+        "nosotros": "vinimos",
+        "vosotros": "vinisteis",
+        "ellos": "vinieron"
+      },
+      "imperfecto": {
+        "yo": "venía",
+        "vos": "venías",
+        "el": "venía",
+        "nosotros": "veníamos",
+        "vosotros": "veníais",
+        "ellos": "venían"
+      },
+      "futuro": {
+        "yo": "vendré",
+        "vos": "vendrás",
+        "el": "vendrá",
+        "nosotros": "vendremos",
+        "vosotros": "vendréis",
+        "ellos": "vendrán"
+      },
+      "condicional": {
+        "yo": "vendría",
+        "vos": "vendrías",
+        "el": "vendría",
+        "nosotros": "vendríamos",
+        "vosotros": "vendríais",
+        "ellos": "vendrían"
+      }
+    },
     "exampleSpanish": "Vení para acá / Vine temprano",
+    "exampleEnglish": null,
     "isIrregular": true,
     "category": "essential"
   },
   {
     "infinitive": "poder",
-    "presenteVos": "podés",
-    "pasadoVos": "pudiste",
-    "presenteYo": "puedo",
-    "pasadoYo": "pude",
     "english": "to be able to",
+    "conjugations": {
+      "presente": {
+        "yo": "puedo",
+        "vos": "podés",
+        "el": "puede",
+        "nosotros": "podemos",
+        "vosotros": "podéis",
+        "ellos": "pueden"
+      },
+      "preterito": {
+        "yo": "pude",
+        "vos": "pudiste",
+        "el": "pudo",
+        "nosotros": "pudimos",
+        "vosotros": "pudisteis",
+        "ellos": "pudieron"
+      },
+      "imperfecto": {
+        "yo": "podía",
+        "vos": "podías",
+        "el": "podía",
+        "nosotros": "podíamos",
+        "vosotros": "podíais",
+        "ellos": "podían"
+      },
+      "futuro": {
+        "yo": "podré",
+        "vos": "podrás",
+        "el": "podrá",
+        "nosotros": "podremos",
+        "vosotros": "podréis",
+        "ellos": "podrán"
+      },
+      "condicional": {
+        "yo": "podría",
+        "vos": "podrías",
+        "el": "podría",
+        "nosotros": "podríamos",
+        "vosotros": "podríais",
+        "ellos": "podrían"
+      }
+    },
     "exampleSpanish": "¿Podés ayudarme? / Pude hacerlo",
+    "exampleEnglish": null,
     "isIrregular": true,
     "category": "essential"
   },
   {
     "infinitive": "querer",
-    "presenteVos": "querés",
-    "pasadoVos": "quisiste",
-    "presenteYo": "quiero",
-    "pasadoYo": "quise",
     "english": "to want / to love",
+    "conjugations": {
+      "presente": {
+        "yo": "quiero",
+        "vos": "querés",
+        "el": "quiere",
+        "nosotros": "queremos",
+        "vosotros": "queréis",
+        "ellos": "quieren"
+      },
+      "preterito": {
+        "yo": "quise",
+        "vos": "quisiste",
+        "el": "quiso",
+        "nosotros": "quisimos",
+        "vosotros": "quisisteis",
+        "ellos": "quisieron"
+      },
+      "imperfecto": {
+        "yo": "quería",
+        "vos": "querías",
+        "el": "quería",
+        "nosotros": "queríamos",
+        "vosotros": "queríais",
+        "ellos": "querían"
+      },
+      "futuro": {
+        "yo": "querré",
+        "vos": "querrás",
+        "el": "querrá",
+        "nosotros": "querremos",
+        "vosotros": "querréis",
+        "ellos": "querrán"
+      },
+      "condicional": {
+        "yo": "querría",
+        "vos": "querrías",
+        "el": "querría",
+        "nosotros": "querríamos",
+        "vosotros": "querríais",
+        "ellos": "querrían"
+      }
+    },
     "exampleSpanish": "Te quiero / Quise mate",
+    "exampleEnglish": null,
     "isIrregular": true,
     "category": "social"
   },
   {
     "infinitive": "saber",
-    "presenteVos": "sabés",
-    "pasadoVos": "supiste",
-    "presenteYo": "sé",
-    "pasadoYo": "supe",
     "english": "to know (facts)",
+    "conjugations": {
+      "presente": {
+        "yo": "sé",
+        "vos": "sabés",
+        "el": "sabe",
+        "nosotros": "sabemos",
+        "vosotros": "sabéis",
+        "ellos": "saben"
+      },
+      "preterito": {
+        "yo": "supe",
+        "vos": "supiste",
+        "el": "supo",
+        "nosotros": "supimos",
+        "vosotros": "supisteis",
+        "ellos": "supieron"
+      },
+      "imperfecto": {
+        "yo": "sabía",
+        "vos": "sabías",
+        "el": "sabía",
+        "nosotros": "sabíamos",
+        "vosotros": "sabíais",
+        "ellos": "sabían"
+      },
+      "futuro": {
+        "yo": "sabré",
+        "vos": "sabrás",
+        "el": "sabrá",
+        "nosotros": "sabremos",
+        "vosotros": "sabréis",
+        "ellos": "sabrán"
+      },
+      "condicional": {
+        "yo": "sabría",
+        "vos": "sabrías",
+        "el": "sabría",
+        "nosotros": "sabríamos",
+        "vosotros": "sabríais",
+        "ellos": "sabrían"
+      }
+    },
     "exampleSpanish": "¿Sabés eso? / Supe la respuesta",
+    "exampleEnglish": null,
     "isIrregular": true,
     "category": "essential"
   },
   {
     "infinitive": "conocer",
-    "presenteVos": "conocés",
-    "pasadoVos": "conociste",
-    "presenteYo": "conozco",
-    "pasadoYo": "conocí",
     "english": "to know / to meet",
+    "conjugations": {
+      "presente": {
+        "yo": "conoco",
+        "vos": "conocés",
+        "el": "conoce",
+        "nosotros": "conocemos",
+        "vosotros": "conocéis",
+        "ellos": "conocen"
+      },
+      "preterito": {
+        "yo": "conocí",
+        "vos": "conociste",
+        "el": "conoció",
+        "nosotros": "conocimos",
+        "vosotros": "conocisteis",
+        "ellos": "conocieron"
+      },
+      "imperfecto": {
+        "yo": "conocía",
+        "vos": "conocías",
+        "el": "conocía",
+        "nosotros": "conocíamos",
+        "vosotros": "conocíais",
+        "ellos": "conocían"
+      },
+      "futuro": {
+        "yo": "conoceré",
+        "vos": "conocerás",
+        "el": "conocerá",
+        "nosotros": "conoceremos",
+        "vosotros": "conoceréis",
+        "ellos": "conocerán"
+      },
+      "condicional": {
+        "yo": "conocería",
+        "vos": "conocerías",
+        "el": "conocería",
+        "nosotros": "conoceríamos",
+        "vosotros": "conoceríais",
+        "ellos": "conocerían"
+      }
+    },
     "exampleSpanish": "Conocés Buenos Aires / Conocí Córdoba",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "social"
   },
   {
     "infinitive": "dar",
-    "presenteVos": "das",
-    "pasadoVos": "diste",
-    "presenteYo": "doy",
-    "pasadoYo": "di",
     "english": "to give",
+    "conjugations": {
+      "presente": {
+        "yo": "doy",
+        "vos": "das",
+        "el": "da",
+        "nosotros": "damos",
+        "vosotros": "dais",
+        "ellos": "dan"
+      },
+      "preterito": {
+        "yo": "di",
+        "vos": "diste",
+        "el": "dio",
+        "nosotros": "dimos",
+        "vosotros": "disteis",
+        "ellos": "dieron"
+      },
+      "imperfecto": {
+        "yo": "daba",
+        "vos": "dabas",
+        "el": "daba",
+        "nosotros": "dábamos",
+        "vosotros": "dabais",
+        "ellos": "daban"
+      },
+      "futuro": {
+        "yo": "daré",
+        "vos": "darás",
+        "el": "dará",
+        "nosotros": "daremos",
+        "vosotros": "daréis",
+        "ellos": "darán"
+      },
+      "condicional": {
+        "yo": "daría",
+        "vos": "darías",
+        "el": "daría",
+        "nosotros": "daríamos",
+        "vosotros": "daríais",
+        "ellos": "darían"
+      }
+    },
     "exampleSpanish": "Me das una mano / Di todo",
+    "exampleEnglish": null,
     "isIrregular": true,
     "category": "essential"
   },
   {
     "infinitive": "ver",
-    "presenteVos": "ves",
-    "pasadoVos": "viste",
-    "presenteYo": "veo",
-    "pasadoYo": "vi",
     "english": "to see",
+    "conjugations": {
+      "presente": {
+        "yo": "veo",
+        "vos": "ves",
+        "el": "ve",
+        "nosotros": "vemos",
+        "vosotros": "veis",
+        "ellos": "ven"
+      },
+      "preterito": {
+        "yo": "vi",
+        "vos": "viste",
+        "el": "vio",
+        "nosotros": "vimos",
+        "vosotros": "visteis",
+        "ellos": "vieron"
+      },
+      "imperfecto": {
+        "yo": "veía",
+        "vos": "veías",
+        "el": "veía",
+        "nosotros": "veíamos",
+        "vosotros": "veíais",
+        "ellos": "veían"
+      },
+      "futuro": {
+        "yo": "veré",
+        "vos": "verás",
+        "el": "verá",
+        "nosotros": "veremos",
+        "vosotros": "veréis",
+        "ellos": "verán"
+      },
+      "condicional": {
+        "yo": "vería",
+        "vos": "verías",
+        "el": "vería",
+        "nosotros": "veríamos",
+        "vosotros": "veríais",
+        "ellos": "verían"
+      }
+    },
     "exampleSpanish": "¿Viste eso? / Vi la película",
+    "exampleEnglish": null,
     "isIrregular": true,
     "category": "essential"
   },
   {
     "infinitive": "tomar",
-    "presenteVos": "tomás",
-    "pasadoVos": "tomaste",
-    "presenteYo": "tomo",
-    "pasadoYo": "tomé",
     "english": "to take / to drink",
+    "conjugations": {
+      "presente": {
+        "yo": "tomo",
+        "vos": "tomás",
+        "el": "toma",
+        "nosotros": "tomamos",
+        "vosotros": "tomáis",
+        "ellos": "toman"
+      },
+      "preterito": {
+        "yo": "tomé",
+        "vos": "tomaste",
+        "el": "tomó",
+        "nosotros": "tomamos",
+        "vosotros": "tomasteis",
+        "ellos": "tomaron"
+      },
+      "imperfecto": {
+        "yo": "tomaba",
+        "vos": "tomabas",
+        "el": "tomaba",
+        "nosotros": "tomábamos",
+        "vosotros": "tomabais",
+        "ellos": "tomaban"
+      },
+      "futuro": {
+        "yo": "tomaré",
+        "vos": "tomarás",
+        "el": "tomará",
+        "nosotros": "tomaremos",
+        "vosotros": "tomaréis",
+        "ellos": "tomarán"
+      },
+      "condicional": {
+        "yo": "tomaría",
+        "vos": "tomarías",
+        "el": "tomaría",
+        "nosotros": "tomaríamos",
+        "vosotros": "tomaríais",
+        "ellos": "tomarían"
+      }
+    },
     "exampleSpanish": "Tomás mate / Tomé café",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "social"
   },
   {
     "infinitive": "comer",
-    "presenteVos": "comés",
-    "pasadoVos": "comiste",
-    "presenteYo": "como",
-    "pasadoYo": "comí",
     "english": "to eat",
+    "conjugations": {
+      "presente": {
+        "yo": "como",
+        "vos": "comés",
+        "el": "come",
+        "nosotros": "comemos",
+        "vosotros": "coméis",
+        "ellos": "comen"
+      },
+      "preterito": {
+        "yo": "comí",
+        "vos": "comiste",
+        "el": "comió",
+        "nosotros": "comimos",
+        "vosotros": "comisteis",
+        "ellos": "comieron"
+      },
+      "imperfecto": {
+        "yo": "comía",
+        "vos": "comías",
+        "el": "comía",
+        "nosotros": "comíamos",
+        "vosotros": "comíais",
+        "ellos": "comían"
+      },
+      "futuro": {
+        "yo": "comeré",
+        "vos": "comerás",
+        "el": "comerá",
+        "nosotros": "comeremos",
+        "vosotros": "comeréis",
+        "ellos": "comerán"
+      },
+      "condicional": {
+        "yo": "comería",
+        "vos": "comerías",
+        "el": "comería",
+        "nosotros": "comeríamos",
+        "vosotros": "comeríais",
+        "ellos": "comerían"
+      }
+    },
     "exampleSpanish": "Comés rápido / Comí empanadas",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "food_drink"
   },
   {
     "infinitive": "vivir",
-    "presenteVos": "vivís",
-    "pasadoVos": "viviste",
-    "presenteYo": "vivo",
-    "pasadoYo": "viví",
     "english": "to live",
+    "conjugations": {
+      "presente": {
+        "yo": "vivo",
+        "vos": "vivís",
+        "el": "vive",
+        "nosotros": "vivimos",
+        "vosotros": "vivís",
+        "ellos": "viven"
+      },
+      "preterito": {
+        "yo": "viví",
+        "vos": "viviste",
+        "el": "vivió",
+        "nosotros": "vivimos",
+        "vosotros": "vivisteis",
+        "ellos": "vivieron"
+      },
+      "imperfecto": {
+        "yo": "vivía",
+        "vos": "vivías",
+        "el": "vivía",
+        "nosotros": "vivíamos",
+        "vosotros": "vivíais",
+        "ellos": "vivían"
+      },
+      "futuro": {
+        "yo": "viviré",
+        "vos": "vivirás",
+        "el": "vivirá",
+        "nosotros": "viviremos",
+        "vosotros": "viviréis",
+        "ellos": "vivirán"
+      },
+      "condicional": {
+        "yo": "viviría",
+        "vos": "vivirías",
+        "el": "viviría",
+        "nosotros": "viviríamos",
+        "vosotros": "viviríais",
+        "ellos": "vivirían"
+      }
+    },
     "exampleSpanish": "Vivís lejos / Viví en Rosario",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "essential"
   },
   {
     "infinitive": "trabajar",
-    "presenteVos": "trabajás",
-    "pasadoVos": "trabajaste",
-    "presenteYo": "trabajo",
-    "pasadoYo": "trabajé",
     "english": "to work",
+    "conjugations": {
+      "presente": {
+        "yo": "trabajo",
+        "vos": "trabajás",
+        "el": "trabaja",
+        "nosotros": "trabajamos",
+        "vosotros": "trabajáis",
+        "ellos": "trabajan"
+      },
+      "preterito": {
+        "yo": "trabajé",
+        "vos": "trabajaste",
+        "el": "trabajó",
+        "nosotros": "trabajamos",
+        "vosotros": "trabajasteis",
+        "ellos": "trabajaron"
+      },
+      "imperfecto": {
+        "yo": "trabajaba",
+        "vos": "trabajabas",
+        "el": "trabajaba",
+        "nosotros": "trabajábamos",
+        "vosotros": "trabajabais",
+        "ellos": "trabajaban"
+      },
+      "futuro": {
+        "yo": "trabajaré",
+        "vos": "trabajarás",
+        "el": "trabajará",
+        "nosotros": "trabajaremos",
+        "vosotros": "trabajaréis",
+        "ellos": "trabajarán"
+      },
+      "condicional": {
+        "yo": "trabajaría",
+        "vos": "trabajarías",
+        "el": "trabajaría",
+        "nosotros": "trabajaríamos",
+        "vosotros": "trabajaríais",
+        "ellos": "trabajarían"
+      }
+    },
     "exampleSpanish": "Trabajás mucho / Trabajé todo el día",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "essential"
   },
   {
     "infinitive": "estudiar",
-    "presenteVos": "estudiás",
-    "pasadoVos": "estudiaste",
-    "presenteYo": "estudio",
-    "pasadoYo": "estudié",
     "english": "to study",
+    "conjugations": {
+      "presente": {
+        "yo": "estudio",
+        "vos": "estudiás",
+        "el": "estudia",
+        "nosotros": "estudiamos",
+        "vosotros": "estudiáis",
+        "ellos": "estudian"
+      },
+      "preterito": {
+        "yo": "estudié",
+        "vos": "estudiaste",
+        "el": "estudió",
+        "nosotros": "estudiamos",
+        "vosotros": "estudiasteis",
+        "ellos": "estudiaron"
+      },
+      "imperfecto": {
+        "yo": "estudiaba",
+        "vos": "estudiabas",
+        "el": "estudiaba",
+        "nosotros": "estudiábamos",
+        "vosotros": "estudiabais",
+        "ellos": "estudiaban"
+      },
+      "futuro": {
+        "yo": "estudiaré",
+        "vos": "estudiarás",
+        "el": "estudiará",
+        "nosotros": "estudiaremos",
+        "vosotros": "estudiaréis",
+        "ellos": "estudiarán"
+      },
+      "condicional": {
+        "yo": "estudiaría",
+        "vos": "estudiarías",
+        "el": "estudiaría",
+        "nosotros": "estudiaríamos",
+        "vosotros": "estudiaríais",
+        "ellos": "estudiarían"
+      }
+    },
     "exampleSpanish": "Estudiás medicina / Estudié inglés",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "essential"
   },
   {
     "infinitive": "necesitar",
-    "presenteVos": "necesitás",
-    "pasadoVos": "necesitaste",
-    "presenteYo": "necesito",
-    "pasadoYo": "necesité",
     "english": "to need",
+    "conjugations": {
+      "presente": {
+        "yo": "necesito",
+        "vos": "necesitás",
+        "el": "necesita",
+        "nosotros": "necesitamos",
+        "vosotros": "necesitáis",
+        "ellos": "necesitan"
+      },
+      "preterito": {
+        "yo": "necesité",
+        "vos": "necesitaste",
+        "el": "necesitó",
+        "nosotros": "necesitamos",
+        "vosotros": "necesitasteis",
+        "ellos": "necesitaron"
+      },
+      "imperfecto": {
+        "yo": "necesitaba",
+        "vos": "necesitabas",
+        "el": "necesitaba",
+        "nosotros": "necesitábamos",
+        "vosotros": "necesitabais",
+        "ellos": "necesitaban"
+      },
+      "futuro": {
+        "yo": "necesitaré",
+        "vos": "necesitarás",
+        "el": "necesitará",
+        "nosotros": "necesitaremos",
+        "vosotros": "necesitaréis",
+        "ellos": "necesitarán"
+      },
+      "condicional": {
+        "yo": "necesitaría",
+        "vos": "necesitarías",
+        "el": "necesitaría",
+        "nosotros": "necesitaríamos",
+        "vosotros": "necesitaríais",
+        "ellos": "necesitarían"
+      }
+    },
     "exampleSpanish": "Necesitás descansar / Necesité ayuda",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "essential"
   },
   {
     "infinitive": "gustar",
-    "presenteVos": "te gusta",
-    "pasadoVos": "te gustó",
-    "presenteYo": "me gusta",
-    "pasadoYo": "me gustó",
     "english": "to like",
+    "conjugations": {
+      "presente": {
+        "yo": "gusto",
+        "vos": "gustás",
+        "el": "gusta",
+        "nosotros": "gustamos",
+        "vosotros": "gustáis",
+        "ellos": "gustan"
+      },
+      "preterito": {
+        "yo": "gusté",
+        "vos": "gustaste",
+        "el": "gustó",
+        "nosotros": "gustamos",
+        "vosotros": "gustasteis",
+        "ellos": "gustaron"
+      },
+      "imperfecto": {
+        "yo": "gustaba",
+        "vos": "gustabas",
+        "el": "gustaba",
+        "nosotros": "gustábamos",
+        "vosotros": "gustabais",
+        "ellos": "gustaban"
+      },
+      "futuro": {
+        "yo": "gustaré",
+        "vos": "gustarás",
+        "el": "gustará",
+        "nosotros": "gustaremos",
+        "vosotros": "gustaréis",
+        "ellos": "gustarán"
+      },
+      "condicional": {
+        "yo": "gustaría",
+        "vos": "gustarías",
+        "el": "gustaría",
+        "nosotros": "gustaríamos",
+        "vosotros": "gustaríais",
+        "ellos": "gustarían"
+      }
+    },
     "exampleSpanish": "Te gusta el dulce de leche / Me gustó la película",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "social"
   },
   {
     "infinitive": "quedar",
-    "presenteVos": "quedás",
-    "pasadoVos": "quedaste",
-    "presenteYo": "quedo",
-    "pasadoYo": "quedé",
     "english": "to stay / to remain",
+    "conjugations": {
+      "presente": {
+        "yo": "quedo",
+        "vos": "quedás",
+        "el": "queda",
+        "nosotros": "quedamos",
+        "vosotros": "quedáis",
+        "ellos": "quedan"
+      },
+      "preterito": {
+        "yo": "quedé",
+        "vos": "quedaste",
+        "el": "quedó",
+        "nosotros": "quedamos",
+        "vosotros": "quedasteis",
+        "ellos": "quedaron"
+      },
+      "imperfecto": {
+        "yo": "quedaba",
+        "vos": "quedabas",
+        "el": "quedaba",
+        "nosotros": "quedábamos",
+        "vosotros": "quedabais",
+        "ellos": "quedaban"
+      },
+      "futuro": {
+        "yo": "quedaré",
+        "vos": "quedarás",
+        "el": "quedará",
+        "nosotros": "quedaremos",
+        "vosotros": "quedaréis",
+        "ellos": "quedarán"
+      },
+      "condicional": {
+        "yo": "quedaría",
+        "vos": "quedarías",
+        "el": "quedaría",
+        "nosotros": "quedaríamos",
+        "vosotros": "quedaríais",
+        "ellos": "quedarían"
+      }
+    },
     "exampleSpanish": "¿Dónde quedás? / Quedé en casa",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "essential"
   },
   {
     "infinitive": "salir",
-    "presenteVos": "salís",
-    "pasadoVos": "saliste",
-    "presenteYo": "salgo",
-    "pasadoYo": "salí",
     "english": "to go out / to leave",
+    "conjugations": {
+      "presente": {
+        "yo": "salgo",
+        "vos": "salís",
+        "el": "sale",
+        "nosotros": "salimos",
+        "vosotros": "salís",
+        "ellos": "salen"
+      },
+      "preterito": {
+        "yo": "salí",
+        "vos": "saliste",
+        "el": "salió",
+        "nosotros": "salimos",
+        "vosotros": "salisteis",
+        "ellos": "salieron"
+      },
+      "imperfecto": {
+        "yo": "salía",
+        "vos": "salías",
+        "el": "salía",
+        "nosotros": "salíamos",
+        "vosotros": "salíais",
+        "ellos": "salían"
+      },
+      "futuro": {
+        "yo": "saldré",
+        "vos": "saldrás",
+        "el": "saldrá",
+        "nosotros": "saldremos",
+        "vosotros": "saldréis",
+        "ellos": "saldrán"
+      },
+      "condicional": {
+        "yo": "saldría",
+        "vos": "saldrías",
+        "el": "saldría",
+        "nosotros": "saldríamos",
+        "vosotros": "saldríais",
+        "ellos": "saldrían"
+      }
+    },
     "exampleSpanish": "Salís mucho / Salí anoche",
+    "exampleEnglish": null,
     "isIrregular": true,
     "category": "social"
   },
   {
     "infinitive": "poner",
-    "presenteVos": "ponés",
-    "pasadoVos": "pusiste",
-    "presenteYo": "pongo",
-    "pasadoYo": "puse",
     "english": "to put",
+    "conjugations": {
+      "presente": {
+        "yo": "pongo",
+        "vos": "ponés",
+        "el": "pone",
+        "nosotros": "ponemos",
+        "vosotros": "ponéis",
+        "ellos": "ponen"
+      },
+      "preterito": {
+        "yo": "puse",
+        "vos": "pusiste",
+        "el": "puso",
+        "nosotros": "pusimos",
+        "vosotros": "pusisteis",
+        "ellos": "pusieron"
+      },
+      "imperfecto": {
+        "yo": "ponía",
+        "vos": "ponías",
+        "el": "ponía",
+        "nosotros": "poníamos",
+        "vosotros": "poníais",
+        "ellos": "ponían"
+      },
+      "futuro": {
+        "yo": "pondré",
+        "vos": "pondrás",
+        "el": "pondrá",
+        "nosotros": "pondremos",
+        "vosotros": "pondréis",
+        "ellos": "pondrán"
+      },
+      "condicional": {
+        "yo": "pondría",
+        "vos": "pondrías",
+        "el": "pondría",
+        "nosotros": "pondríamos",
+        "vosotros": "pondríais",
+        "ellos": "pondrían"
+      }
+    },
     "exampleSpanish": "Poné la pava / Puse la pava",
+    "exampleEnglish": null,
     "isIrregular": true,
     "category": "essential"
   },
   {
     "infinitive": "traer",
-    "presenteVos": "traés",
-    "pasadoVos": "trajiste",
-    "presenteYo": "traigo",
-    "pasadoYo": "traje",
     "english": "to bring",
+    "conjugations": {
+      "presente": {
+        "yo": "traigo",
+        "vos": "traés",
+        "el": "trae",
+        "nosotros": "traemos",
+        "vosotros": "traéis",
+        "ellos": "traen"
+      },
+      "preterito": {
+        "yo": "traje",
+        "vos": "trajiste",
+        "el": "trajo",
+        "nosotros": "trajimos",
+        "vosotros": "trajisteis",
+        "ellos": "trajeron"
+      },
+      "imperfecto": {
+        "yo": "traía",
+        "vos": "traías",
+        "el": "traía",
+        "nosotros": "traíamos",
+        "vosotros": "traíais",
+        "ellos": "traían"
+      },
+      "futuro": {
+        "yo": "traeré",
+        "vos": "traerás",
+        "el": "traerá",
+        "nosotros": "traeremos",
+        "vosotros": "traeréis",
+        "ellos": "traerán"
+      },
+      "condicional": {
+        "yo": "traería",
+        "vos": "traerías",
+        "el": "traería",
+        "nosotros": "traeríamos",
+        "vosotros": "traeríais",
+        "ellos": "traerían"
+      }
+    },
     "exampleSpanish": "Traé el mate / Traje el mate",
+    "exampleEnglish": null,
     "isIrregular": true,
     "category": "essential"
   },
   {
     "infinitive": "llamar",
-    "presenteVos": "llamás",
-    "pasadoVos": "llamaste",
-    "presenteYo": "llamo",
-    "pasadoYo": "llamé",
     "english": "to call",
+    "conjugations": {
+      "presente": {
+        "yo": "llamo",
+        "vos": "llamás",
+        "el": "llama",
+        "nosotros": "llamamos",
+        "vosotros": "llamáis",
+        "ellos": "llaman"
+      },
+      "preterito": {
+        "yo": "llamé",
+        "vos": "llamaste",
+        "el": "llamó",
+        "nosotros": "llamamos",
+        "vosotros": "llamasteis",
+        "ellos": "llamaron"
+      },
+      "imperfecto": {
+        "yo": "llamaba",
+        "vos": "llamabas",
+        "el": "llamaba",
+        "nosotros": "llamábamos",
+        "vosotros": "llamabais",
+        "ellos": "llamaban"
+      },
+      "futuro": {
+        "yo": "llamaré",
+        "vos": "llamarás",
+        "el": "llamará",
+        "nosotros": "llamaremos",
+        "vosotros": "llamaréis",
+        "ellos": "llamarán"
+      },
+      "condicional": {
+        "yo": "llamaría",
+        "vos": "llamarías",
+        "el": "llamaría",
+        "nosotros": "llamaríamos",
+        "vosotros": "llamaríais",
+        "ellos": "llamarían"
+      }
+    },
     "exampleSpanish": "Llamás más tarde / Llamé a mi vieja",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "social"
   },
   {
     "infinitive": "jugar",
-    "presenteVos": "jugás",
-    "pasadoVos": "jugaste",
-    "presenteYo": "juego",
-    "pasadoYo": "jugué",
     "english": "to play",
+    "conjugations": {
+      "presente": {
+        "yo": "jugo",
+        "vos": "jugás",
+        "el": "juga",
+        "nosotros": "jugamos",
+        "vosotros": "jugáis",
+        "ellos": "jugan"
+      },
+      "preterito": {
+        "yo": "jugé",
+        "vos": "jugaste",
+        "el": "jugó",
+        "nosotros": "jugamos",
+        "vosotros": "jugasteis",
+        "ellos": "jugaron"
+      },
+      "imperfecto": {
+        "yo": "jugaba",
+        "vos": "jugabas",
+        "el": "jugaba",
+        "nosotros": "jugábamos",
+        "vosotros": "jugabais",
+        "ellos": "jugaban"
+      },
+      "futuro": {
+        "yo": "jugaré",
+        "vos": "jugarás",
+        "el": "jugará",
+        "nosotros": "jugaremos",
+        "vosotros": "jugaréis",
+        "ellos": "jugarán"
+      },
+      "condicional": {
+        "yo": "jugaría",
+        "vos": "jugarías",
+        "el": "jugaría",
+        "nosotros": "jugaríamos",
+        "vosotros": "jugaríais",
+        "ellos": "jugarían"
+      }
+    },
     "exampleSpanish": "Jugás al fútbol / Jugué al fútbol",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "social"
   },
   {
     "infinitive": "comprar",
-    "presenteVos": "comprás",
-    "pasadoVos": "compraste",
-    "presenteYo": "compro",
-    "pasadoYo": "compré",
     "english": "to buy",
+    "conjugations": {
+      "presente": {
+        "yo": "compro",
+        "vos": "comprás",
+        "el": "compra",
+        "nosotros": "compramos",
+        "vosotros": "compráis",
+        "ellos": "compran"
+      },
+      "preterito": {
+        "yo": "compré",
+        "vos": "compraste",
+        "el": "compró",
+        "nosotros": "compramos",
+        "vosotros": "comprasteis",
+        "ellos": "compraron"
+      },
+      "imperfecto": {
+        "yo": "compraba",
+        "vos": "comprabas",
+        "el": "compraba",
+        "nosotros": "comprábamos",
+        "vosotros": "comprabais",
+        "ellos": "compraban"
+      },
+      "futuro": {
+        "yo": "compraré",
+        "vos": "comprarás",
+        "el": "comprará",
+        "nosotros": "compraremos",
+        "vosotros": "compraréis",
+        "ellos": "comprarán"
+      },
+      "condicional": {
+        "yo": "compraría",
+        "vos": "comprarías",
+        "el": "compraría",
+        "nosotros": "compraríamos",
+        "vosotros": "compraríais",
+        "ellos": "comprarían"
+      }
+    },
     "exampleSpanish": "Comprás ropa / Compré una remera",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "essential"
   },
   {
     "infinitive": "pagar",
-    "presenteVos": "pagás",
-    "pasadoVos": "pagaste",
-    "presenteYo": "pago",
-    "pasadoYo": "pagué",
     "english": "to pay",
+    "conjugations": {
+      "presente": {
+        "yo": "pago",
+        "vos": "pagás",
+        "el": "paga",
+        "nosotros": "pagamos",
+        "vosotros": "pagáis",
+        "ellos": "pagan"
+      },
+      "preterito": {
+        "yo": "pagé",
+        "vos": "pagaste",
+        "el": "pagó",
+        "nosotros": "pagamos",
+        "vosotros": "pagasteis",
+        "ellos": "pagaron"
+      },
+      "imperfecto": {
+        "yo": "pagaba",
+        "vos": "pagabas",
+        "el": "pagaba",
+        "nosotros": "pagábamos",
+        "vosotros": "pagabais",
+        "ellos": "pagaban"
+      },
+      "futuro": {
+        "yo": "pagaré",
+        "vos": "pagarás",
+        "el": "pagará",
+        "nosotros": "pagaremos",
+        "vosotros": "pagaréis",
+        "ellos": "pagarán"
+      },
+      "condicional": {
+        "yo": "pagaría",
+        "vos": "pagarías",
+        "el": "pagaría",
+        "nosotros": "pagaríamos",
+        "vosotros": "pagaríais",
+        "ellos": "pagarían"
+      }
+    },
     "exampleSpanish": "Pagás vos / Pagué la cuenta",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "essential"
   },
   {
     "infinitive": "esperar",
-    "presenteVos": "esperás",
-    "pasadoVos": "esperaste",
-    "presenteYo": "espero",
-    "pasadoYo": "esperé",
     "english": "to wait / to hope",
+    "conjugations": {
+      "presente": {
+        "yo": "espero",
+        "vos": "esperás",
+        "el": "espera",
+        "nosotros": "esperamos",
+        "vosotros": "esperáis",
+        "ellos": "esperan"
+      },
+      "preterito": {
+        "yo": "esperé",
+        "vos": "esperaste",
+        "el": "esperó",
+        "nosotros": "esperamos",
+        "vosotros": "esperasteis",
+        "ellos": "esperaron"
+      },
+      "imperfecto": {
+        "yo": "esperaba",
+        "vos": "esperabas",
+        "el": "esperaba",
+        "nosotros": "esperábamos",
+        "vosotros": "esperabais",
+        "ellos": "esperaban"
+      },
+      "futuro": {
+        "yo": "esperaré",
+        "vos": "esperarás",
+        "el": "esperará",
+        "nosotros": "esperaremos",
+        "vosotros": "esperaréis",
+        "ellos": "esperarán"
+      },
+      "condicional": {
+        "yo": "esperaría",
+        "vos": "esperarías",
+        "el": "esperaría",
+        "nosotros": "esperaríamos",
+        "vosotros": "esperaríais",
+        "ellos": "esperarían"
+      }
+    },
     "exampleSpanish": "Esperás el bondi / Esperé mucho",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "essential"
   },
   {
     "infinitive": "sentir",
-    "presenteVos": "sentís",
-    "pasadoVos": "sentiste",
-    "presenteYo": "siento",
-    "pasadoYo": "sentí",
     "english": "to feel",
+    "conjugations": {
+      "presente": {
+        "yo": "sento",
+        "vos": "sentís",
+        "el": "sente",
+        "nosotros": "sentimos",
+        "vosotros": "sentís",
+        "ellos": "senten"
+      },
+      "preterito": {
+        "yo": "sentí",
+        "vos": "sentiste",
+        "el": "sentió",
+        "nosotros": "sentimos",
+        "vosotros": "sentisteis",
+        "ellos": "sentieron"
+      },
+      "imperfecto": {
+        "yo": "sentía",
+        "vos": "sentías",
+        "el": "sentía",
+        "nosotros": "sentíamos",
+        "vosotros": "sentíais",
+        "ellos": "sentían"
+      },
+      "futuro": {
+        "yo": "sentiré",
+        "vos": "sentirás",
+        "el": "sentirá",
+        "nosotros": "sentiremos",
+        "vosotros": "sentiréis",
+        "ellos": "sentirán"
+      },
+      "condicional": {
+        "yo": "sentiría",
+        "vos": "sentirías",
+        "el": "sentiría",
+        "nosotros": "sentiríamos",
+        "vosotros": "sentiríais",
+        "ellos": "sentirían"
+      }
+    },
     "exampleSpanish": "Sentís frío / Sentí calor",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "emotions"
   },
   {
     "infinitive": "dormir",
-    "presenteVos": "dormís",
-    "pasadoVos": "dormiste",
-    "presenteYo": "duermo",
-    "pasadoYo": "dormí",
     "english": "to sleep",
+    "conjugations": {
+      "presente": {
+        "yo": "dormo",
+        "vos": "dormís",
+        "el": "dorme",
+        "nosotros": "dormimos",
+        "vosotros": "dormís",
+        "ellos": "dormen"
+      },
+      "preterito": {
+        "yo": "dormí",
+        "vos": "dormiste",
+        "el": "dormió",
+        "nosotros": "dormimos",
+        "vosotros": "dormisteis",
+        "ellos": "dormieron"
+      },
+      "imperfecto": {
+        "yo": "dormía",
+        "vos": "dormías",
+        "el": "dormía",
+        "nosotros": "dormíamos",
+        "vosotros": "dormíais",
+        "ellos": "dormían"
+      },
+      "futuro": {
+        "yo": "dormiré",
+        "vos": "dormirás",
+        "el": "dormirá",
+        "nosotros": "dormiremos",
+        "vosotros": "dormiréis",
+        "ellos": "dormirán"
+      },
+      "condicional": {
+        "yo": "dormiría",
+        "vos": "dormirías",
+        "el": "dormiría",
+        "nosotros": "dormiríamos",
+        "vosotros": "dormiríais",
+        "ellos": "dormirían"
+      }
+    },
     "exampleSpanish": "Dormís mucho / Dormí poco",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "essential"
   },
   {
     "infinitive": "laburar",
-    "presenteVos": "laburás",
-    "pasadoVos": "laburaste",
-    "presenteYo": "laburo",
-    "pasadoYo": "laburé",
     "english": "to work (informal)",
+    "conjugations": {
+      "presente": {
+        "yo": "laburo",
+        "vos": "laburás",
+        "el": "labura",
+        "nosotros": "laburamos",
+        "vosotros": "laburáis",
+        "ellos": "laburan"
+      },
+      "preterito": {
+        "yo": "laburé",
+        "vos": "laburaste",
+        "el": "laburó",
+        "nosotros": "laburamos",
+        "vosotros": "laburasteis",
+        "ellos": "laburaron"
+      },
+      "imperfecto": {
+        "yo": "laburaba",
+        "vos": "laburabas",
+        "el": "laburaba",
+        "nosotros": "laburábamos",
+        "vosotros": "laburabais",
+        "ellos": "laburaban"
+      },
+      "futuro": {
+        "yo": "laburaré",
+        "vos": "laburarás",
+        "el": "laburará",
+        "nosotros": "laburaremos",
+        "vosotros": "laburaréis",
+        "ellos": "laburarán"
+      },
+      "condicional": {
+        "yo": "laburaría",
+        "vos": "laburarías",
+        "el": "laburaría",
+        "nosotros": "laburaríamos",
+        "vosotros": "laburaríais",
+        "ellos": "laburarían"
+      }
+    },
     "exampleSpanish": "Laburás todo el día / Laburé ayer",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "slang"
   },
   {
     "infinitive": "bancar",
-    "presenteVos": "bancás",
-    "pasadoVos": "bancaste",
-    "presenteYo": "banco",
-    "pasadoYo": "banqué",
     "english": "to support / to put up with",
+    "conjugations": {
+      "presente": {
+        "yo": "banco",
+        "vos": "bancás",
+        "el": "banca",
+        "nosotros": "bancamos",
+        "vosotros": "bancáis",
+        "ellos": "bancan"
+      },
+      "preterito": {
+        "yo": "bancé",
+        "vos": "bancaste",
+        "el": "bancó",
+        "nosotros": "bancamos",
+        "vosotros": "bancasteis",
+        "ellos": "bancaron"
+      },
+      "imperfecto": {
+        "yo": "bancaba",
+        "vos": "bancabas",
+        "el": "bancaba",
+        "nosotros": "bancábamos",
+        "vosotros": "bancabais",
+        "ellos": "bancaban"
+      },
+      "futuro": {
+        "yo": "bancaré",
+        "vos": "bancarás",
+        "el": "bancará",
+        "nosotros": "bancaremos",
+        "vosotros": "bancaréis",
+        "ellos": "bancarán"
+      },
+      "condicional": {
+        "yo": "bancaría",
+        "vos": "bancarías",
+        "el": "bancaría",
+        "nosotros": "bancaríamos",
+        "vosotros": "bancaríais",
+        "ellos": "bancarían"
+      }
+    },
     "exampleSpanish": "Te banco / Te banqué siempre",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "slang"
   },
   {
     "infinitive": "joder",
-    "presenteVos": "jodés",
-    "pasadoVos": "jodiste",
-    "presenteYo": "jodo",
-    "pasadoYo": "jodí",
     "english": "to annoy / to mess around",
+    "conjugations": {
+      "presente": {
+        "yo": "jodo",
+        "vos": "jodés",
+        "el": "jode",
+        "nosotros": "jodemos",
+        "vosotros": "jodéis",
+        "ellos": "joden"
+      },
+      "preterito": {
+        "yo": "jodí",
+        "vos": "jodiste",
+        "el": "jodió",
+        "nosotros": "jodimos",
+        "vosotros": "jodisteis",
+        "ellos": "jodieron"
+      },
+      "imperfecto": {
+        "yo": "jodía",
+        "vos": "jodías",
+        "el": "jodía",
+        "nosotros": "jodíamos",
+        "vosotros": "jodíais",
+        "ellos": "jodían"
+      },
+      "futuro": {
+        "yo": "joderé",
+        "vos": "joderás",
+        "el": "joderá",
+        "nosotros": "joderemos",
+        "vosotros": "joderéis",
+        "ellos": "joderán"
+      },
+      "condicional": {
+        "yo": "jodería",
+        "vos": "joderías",
+        "el": "jodería",
+        "nosotros": "joderíamos",
+        "vosotros": "joderíais",
+        "ellos": "joderían"
+      }
+    },
     "exampleSpanish": "No jodás tanto / No jodí tanto",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "slang"
   },
   {
     "infinitive": "hinchar",
-    "presenteVos": "hinchás",
-    "pasadoVos": "hinchaste",
-    "presenteYo": "hincho",
-    "pasadoYo": "hinché",
     "english": "to bother / to cheer",
+    "conjugations": {
+      "presente": {
+        "yo": "hincho",
+        "vos": "hinchás",
+        "el": "hincha",
+        "nosotros": "hinchamos",
+        "vosotros": "hincháis",
+        "ellos": "hinchan"
+      },
+      "preterito": {
+        "yo": "hinché",
+        "vos": "hinchaste",
+        "el": "hinchó",
+        "nosotros": "hinchamos",
+        "vosotros": "hinchasteis",
+        "ellos": "hincharon"
+      },
+      "imperfecto": {
+        "yo": "hinchaba",
+        "vos": "hinchabas",
+        "el": "hinchaba",
+        "nosotros": "hinchábamos",
+        "vosotros": "hinchabais",
+        "ellos": "hinchaban"
+      },
+      "futuro": {
+        "yo": "hincharé",
+        "vos": "hincharás",
+        "el": "hinchará",
+        "nosotros": "hincharemos",
+        "vosotros": "hincharéis",
+        "ellos": "hincharán"
+      },
+      "condicional": {
+        "yo": "hincharía",
+        "vos": "hincharías",
+        "el": "hincharía",
+        "nosotros": "hincharíamos",
+        "vosotros": "hincharíais",
+        "ellos": "hincharían"
+      }
+    },
     "exampleSpanish": "No hinchés / Hinché por Boca",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "slang"
   },
   {
     "infinitive": "manejar",
-    "presenteVos": "manejás",
-    "pasadoVos": "manejaste",
-    "presenteYo": "manejo",
-    "pasadoYo": "manejé",
     "english": "to drive",
+    "conjugations": {
+      "presente": {
+        "yo": "manejo",
+        "vos": "manejás",
+        "el": "maneja",
+        "nosotros": "manejamos",
+        "vosotros": "manejáis",
+        "ellos": "manejan"
+      },
+      "preterito": {
+        "yo": "manejé",
+        "vos": "manejaste",
+        "el": "manejó",
+        "nosotros": "manejamos",
+        "vosotros": "manejasteis",
+        "ellos": "manejaron"
+      },
+      "imperfecto": {
+        "yo": "manejaba",
+        "vos": "manejabas",
+        "el": "manejaba",
+        "nosotros": "manejábamos",
+        "vosotros": "manejabais",
+        "ellos": "manejaban"
+      },
+      "futuro": {
+        "yo": "manejaré",
+        "vos": "manejarás",
+        "el": "manejará",
+        "nosotros": "manejaremos",
+        "vosotros": "manejaréis",
+        "ellos": "manejarán"
+      },
+      "condicional": {
+        "yo": "manejaría",
+        "vos": "manejarías",
+        "el": "manejaría",
+        "nosotros": "manejaríamos",
+        "vosotros": "manejaríais",
+        "ellos": "manejarían"
+      }
+    },
     "exampleSpanish": "Manejás rápido / Manejé hasta Mar del Plata",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "essential"
   },
   {
     "infinitive": "andar",
-    "presenteVos": "andás",
-    "pasadoVos": "anduviste",
-    "presenteYo": "ando",
-    "pasadoYo": "anduve",
     "english": "to go around / to walk",
+    "conjugations": {
+      "presente": {
+        "yo": "ando",
+        "vos": "andás",
+        "el": "anda",
+        "nosotros": "andamos",
+        "vosotros": "andáis",
+        "ellos": "andan"
+      },
+      "preterito": {
+        "yo": "anduve",
+        "vos": "anduviste",
+        "el": "anduvo",
+        "nosotros": "anduvimos",
+        "vosotros": "anduvisteis",
+        "ellos": "anduvieron"
+      },
+      "imperfecto": {
+        "yo": "andaba",
+        "vos": "andabas",
+        "el": "andaba",
+        "nosotros": "andábamos",
+        "vosotros": "andabais",
+        "ellos": "andaban"
+      },
+      "futuro": {
+        "yo": "andaré",
+        "vos": "andarás",
+        "el": "andará",
+        "nosotros": "andaremos",
+        "vosotros": "andaréis",
+        "ellos": "andarán"
+      },
+      "condicional": {
+        "yo": "andaría",
+        "vos": "andarías",
+        "el": "andaría",
+        "nosotros": "andaríamos",
+        "vosotros": "andaríais",
+        "ellos": "andarían"
+      }
+    },
     "exampleSpanish": "¿Cómo andás? / Anduve por el centro",
+    "exampleEnglish": null,
     "isIrregular": true,
     "category": "essential"
   },
   {
     "infinitive": "charlar",
-    "presenteVos": "charlás",
-    "pasadoVos": "charlaste",
-    "presenteYo": "charlo",
-    "pasadoYo": "charlé",
     "english": "to chat",
+    "conjugations": {
+      "presente": {
+        "yo": "charlo",
+        "vos": "charlás",
+        "el": "charla",
+        "nosotros": "charlamos",
+        "vosotros": "charláis",
+        "ellos": "charlan"
+      },
+      "preterito": {
+        "yo": "charlé",
+        "vos": "charlaste",
+        "el": "charló",
+        "nosotros": "charlamos",
+        "vosotros": "charlasteis",
+        "ellos": "charlaron"
+      },
+      "imperfecto": {
+        "yo": "charlaba",
+        "vos": "charlabas",
+        "el": "charlaba",
+        "nosotros": "charlábamos",
+        "vosotros": "charlabais",
+        "ellos": "charlaban"
+      },
+      "futuro": {
+        "yo": "charlaré",
+        "vos": "charlarás",
+        "el": "charlará",
+        "nosotros": "charlaremos",
+        "vosotros": "charlaréis",
+        "ellos": "charlarán"
+      },
+      "condicional": {
+        "yo": "charlaría",
+        "vos": "charlarías",
+        "el": "charlaría",
+        "nosotros": "charlaríamos",
+        "vosotros": "charlaríais",
+        "ellos": "charlarían"
+      }
+    },
     "exampleSpanish": "Charlás con amigos / Charlé con mis amigos",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "social"
   },
   {
     "infinitive": "pegar",
-    "presenteVos": "pegás",
-    "pasadoVos": "pegaste",
-    "presenteYo": "pego",
-    "pasadoYo": "pegué",
     "english": "to hit / to stick",
+    "conjugations": {
+      "presente": {
+        "yo": "pego",
+        "vos": "pegás",
+        "el": "pega",
+        "nosotros": "pegamos",
+        "vosotros": "pegáis",
+        "ellos": "pegan"
+      },
+      "preterito": {
+        "yo": "pegé",
+        "vos": "pegaste",
+        "el": "pegó",
+        "nosotros": "pegamos",
+        "vosotros": "pegasteis",
+        "ellos": "pegaron"
+      },
+      "imperfecto": {
+        "yo": "pegaba",
+        "vos": "pegabas",
+        "el": "pegaba",
+        "nosotros": "pegábamos",
+        "vosotros": "pegabais",
+        "ellos": "pegaban"
+      },
+      "futuro": {
+        "yo": "pegaré",
+        "vos": "pegarás",
+        "el": "pegará",
+        "nosotros": "pegaremos",
+        "vosotros": "pegaréis",
+        "ellos": "pegarán"
+      },
+      "condicional": {
+        "yo": "pegaría",
+        "vos": "pegarías",
+        "el": "pegaría",
+        "nosotros": "pegaríamos",
+        "vosotros": "pegaríais",
+        "ellos": "pegarían"
+      }
+    },
     "exampleSpanish": "Pegás buena onda / Pegué buena onda",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "slang"
   },
   {
     "infinitive": "romper",
-    "presenteVos": "rompés",
-    "pasadoVos": "rompiste",
-    "presenteYo": "rompo",
-    "pasadoYo": "rompí",
     "english": "to break",
+    "conjugations": {
+      "presente": {
+        "yo": "rompo",
+        "vos": "rompés",
+        "el": "rompe",
+        "nosotros": "rompemos",
+        "vosotros": "rompéis",
+        "ellos": "rompen"
+      },
+      "preterito": {
+        "yo": "rompí",
+        "vos": "rompiste",
+        "el": "rompió",
+        "nosotros": "rompimos",
+        "vosotros": "rompisteis",
+        "ellos": "rompieron"
+      },
+      "imperfecto": {
+        "yo": "rompía",
+        "vos": "rompías",
+        "el": "rompía",
+        "nosotros": "rompíamos",
+        "vosotros": "rompíais",
+        "ellos": "rompían"
+      },
+      "futuro": {
+        "yo": "romperé",
+        "vos": "romperás",
+        "el": "romperá",
+        "nosotros": "romperemos",
+        "vosotros": "romperéis",
+        "ellos": "romperán"
+      },
+      "condicional": {
+        "yo": "rompería",
+        "vos": "romperías",
+        "el": "rompería",
+        "nosotros": "romperíamos",
+        "vosotros": "romperíais",
+        "ellos": "romperían"
+      }
+    },
     "exampleSpanish": "Rompés todo / Rompí el vaso",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "essential"
   },
   {
     "infinitive": "quedarse",
-    "presenteVos": "te quedás",
-    "pasadoVos": "te quedaste",
-    "presenteYo": "me quedo",
-    "pasadoYo": "me quedé",
     "english": "to stay",
+    "conjugations": {
+      "presente": {
+        "yo": "me quedo",
+        "vos": "te quedás",
+        "el": "se queda",
+        "nosotros": "nos quedamos",
+        "vosotros": "os quedáis",
+        "ellos": "se quedan"
+      },
+      "preterito": {
+        "yo": "me quedé",
+        "vos": "te quedaste",
+        "el": "se quedó",
+        "nosotros": "nos quedamos",
+        "vosotros": "os quedasteis",
+        "ellos": "se quedaron"
+      },
+      "imperfecto": {
+        "yo": "me quedaba",
+        "vos": "te quedabas",
+        "el": "se quedaba",
+        "nosotros": "nos quedábamos",
+        "vosotros": "os quedabais",
+        "ellos": "se quedaban"
+      },
+      "futuro": {
+        "yo": "me quedaré",
+        "vos": "te quedarás",
+        "el": "se quedará",
+        "nosotros": "nos quedaremos",
+        "vosotros": "os quedaréis",
+        "ellos": "se quedarán"
+      },
+      "condicional": {
+        "yo": "me quedaría",
+        "vos": "te quedarías",
+        "el": "se quedaría",
+        "nosotros": "nos quedaríamos",
+        "vosotros": "os quedaríais",
+        "ellos": "se quedarían"
+      }
+    },
     "exampleSpanish": "Te quedás en casa / Me quedé dormido",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "essential"
   },
   {
     "infinitive": "levantarse",
-    "presenteVos": "te levantás",
-    "pasadoVos": "te levantaste",
-    "presenteYo": "me levanto",
-    "pasadoYo": "me levanté",
     "english": "to get up",
+    "conjugations": {
+      "presente": {
+        "yo": "me levanto",
+        "vos": "te levantás",
+        "el": "se levanta",
+        "nosotros": "nos levantamos",
+        "vosotros": "os levantáis",
+        "ellos": "se levantan"
+      },
+      "preterito": {
+        "yo": "me levanté",
+        "vos": "te levantaste",
+        "el": "se levantó",
+        "nosotros": "nos levantamos",
+        "vosotros": "os levantasteis",
+        "ellos": "se levantaron"
+      },
+      "imperfecto": {
+        "yo": "me levantaba",
+        "vos": "te levantabas",
+        "el": "se levantaba",
+        "nosotros": "nos levantábamos",
+        "vosotros": "os levantabais",
+        "ellos": "se levantaban"
+      },
+      "futuro": {
+        "yo": "me levantaré",
+        "vos": "te levantarás",
+        "el": "se levantará",
+        "nosotros": "nos levantaremos",
+        "vosotros": "os levantaréis",
+        "ellos": "se levantarán"
+      },
+      "condicional": {
+        "yo": "me levantaría",
+        "vos": "te levantarías",
+        "el": "se levantaría",
+        "nosotros": "nos levantaríamos",
+        "vosotros": "os levantaríais",
+        "ellos": "se levantarían"
+      }
+    },
     "exampleSpanish": "Te levantás temprano / Me levanté tarde",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "essential"
   },
   {
     "infinitive": "ducharse",
-    "presenteVos": "te duchás",
-    "pasadoVos": "te duchaste",
-    "presenteYo": "me ducho",
-    "pasadoYo": "me duché",
     "english": "to shower",
+    "conjugations": {
+      "presente": {
+        "yo": "me ducho",
+        "vos": "te duchás",
+        "el": "se ducha",
+        "nosotros": "nos duchamos",
+        "vosotros": "os ducháis",
+        "ellos": "se duchan"
+      },
+      "preterito": {
+        "yo": "me duché",
+        "vos": "te duchaste",
+        "el": "se duchó",
+        "nosotros": "nos duchamos",
+        "vosotros": "os duchasteis",
+        "ellos": "se ducharon"
+      },
+      "imperfecto": {
+        "yo": "me duchaba",
+        "vos": "te duchabas",
+        "el": "se duchaba",
+        "nosotros": "nos duchábamos",
+        "vosotros": "os duchabais",
+        "ellos": "se duchaban"
+      },
+      "futuro": {
+        "yo": "me ducharé",
+        "vos": "te ducharás",
+        "el": "se duchará",
+        "nosotros": "nos ducharemos",
+        "vosotros": "os ducharéis",
+        "ellos": "se ducharán"
+      },
+      "condicional": {
+        "yo": "me ducharía",
+        "vos": "te ducharías",
+        "el": "se ducharía",
+        "nosotros": "nos ducharíamos",
+        "vosotros": "os ducharíais",
+        "ellos": "se ducharían"
+      }
+    },
     "exampleSpanish": "Te duchás después del gym / Me duché después del gym",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "essential"
   },
   {
     "infinitive": "encontrarse",
-    "presenteVos": "te encontrás",
-    "pasadoVos": "te encontraste",
-    "presenteYo": "me encuentro",
-    "pasadoYo": "me encontré",
     "english": "to meet / to find oneself",
+    "conjugations": {
+      "presente": {
+        "yo": "me encontro",
+        "vos": "te encontrás",
+        "el": "se encontra",
+        "nosotros": "nos encontramos",
+        "vosotros": "os encontráis",
+        "ellos": "se encontran"
+      },
+      "preterito": {
+        "yo": "me encontré",
+        "vos": "te encontraste",
+        "el": "se encontró",
+        "nosotros": "nos encontramos",
+        "vosotros": "os encontrasteis",
+        "ellos": "se encontraron"
+      },
+      "imperfecto": {
+        "yo": "me encontraba",
+        "vos": "te encontrabas",
+        "el": "se encontraba",
+        "nosotros": "nos encontrábamos",
+        "vosotros": "os encontrabais",
+        "ellos": "se encontraban"
+      },
+      "futuro": {
+        "yo": "me encontraré",
+        "vos": "te encontrarás",
+        "el": "se encontrará",
+        "nosotros": "nos encontraremos",
+        "vosotros": "os encontraréis",
+        "ellos": "se encontrarán"
+      },
+      "condicional": {
+        "yo": "me encontraría",
+        "vos": "te encontrarías",
+        "el": "se encontraría",
+        "nosotros": "nos encontraríamos",
+        "vosotros": "os encontraríais",
+        "ellos": "se encontrarían"
+      }
+    },
     "exampleSpanish": "Te encontrás con alguien / Me encontré con un amigo",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "social"
   },
   {
     "infinitive": "acostarse",
-    "presenteVos": "te acostás",
-    "pasadoVos": "te acostaste",
-    "presenteYo": "me acuesto",
-    "pasadoYo": "me acosté",
     "english": "to go to bed",
+    "conjugations": {
+      "presente": {
+        "yo": "me acosto",
+        "vos": "te acostás",
+        "el": "se acosta",
+        "nosotros": "nos acostamos",
+        "vosotros": "os acostáis",
+        "ellos": "se acostan"
+      },
+      "preterito": {
+        "yo": "me acosté",
+        "vos": "te acostaste",
+        "el": "se acostó",
+        "nosotros": "nos acostamos",
+        "vosotros": "os acostasteis",
+        "ellos": "se acostaron"
+      },
+      "imperfecto": {
+        "yo": "me acostaba",
+        "vos": "te acostabas",
+        "el": "se acostaba",
+        "nosotros": "nos acostábamos",
+        "vosotros": "os acostabais",
+        "ellos": "se acostaban"
+      },
+      "futuro": {
+        "yo": "me acostaré",
+        "vos": "te acostarás",
+        "el": "se acostará",
+        "nosotros": "nos acostaremos",
+        "vosotros": "os acostaréis",
+        "ellos": "se acostarán"
+      },
+      "condicional": {
+        "yo": "me acostaría",
+        "vos": "te acostarías",
+        "el": "se acostaría",
+        "nosotros": "nos acostaríamos",
+        "vosotros": "os acostaríais",
+        "ellos": "se acostarían"
+      }
+    },
     "exampleSpanish": "Te acostás tarde / Me acosté",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "essential"
   },
   {
     "infinitive": "llevar",
-    "presenteVos": "llevás",
-    "pasadoVos": "llevaste",
-    "presenteYo": "llevo",
-    "pasadoYo": "llevé",
     "english": "to carry / to take",
+    "conjugations": {
+      "presente": {
+        "yo": "llevo",
+        "vos": "llevás",
+        "el": "lleva",
+        "nosotros": "llevamos",
+        "vosotros": "lleváis",
+        "ellos": "llevan"
+      },
+      "preterito": {
+        "yo": "llevé",
+        "vos": "llevaste",
+        "el": "llevó",
+        "nosotros": "llevamos",
+        "vosotros": "llevasteis",
+        "ellos": "llevaron"
+      },
+      "imperfecto": {
+        "yo": "llevaba",
+        "vos": "llevabas",
+        "el": "llevaba",
+        "nosotros": "llevábamos",
+        "vosotros": "llevabais",
+        "ellos": "llevaban"
+      },
+      "futuro": {
+        "yo": "llevaré",
+        "vos": "llevarás",
+        "el": "llevará",
+        "nosotros": "llevaremos",
+        "vosotros": "llevaréis",
+        "ellos": "llevarán"
+      },
+      "condicional": {
+        "yo": "llevaría",
+        "vos": "llevarías",
+        "el": "llevaría",
+        "nosotros": "llevaríamos",
+        "vosotros": "llevaríais",
+        "ellos": "llevarían"
+      }
+    },
     "exampleSpanish": "Llevás la guitarra / Llevé la guitarra",
+    "exampleEnglish": null,
     "isIrregular": false,
     "category": "essential"
   }

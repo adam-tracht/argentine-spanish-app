@@ -6,11 +6,14 @@ import Link from 'next/link';
 interface Verb {
   id: number;
   infinitive: string;
-  presenteVos: string;
-  pasadoVos: string;
-  presenteYo: string;
-  pasadoYo: string;
   english: string;
+  conjugations: {
+    presente: { yo: string; vos: string; el: string; nosotros: string; vosotros: string; ellos: string };
+    preterito: { yo: string; vos: string; el: string; nosotros: string; vosotros: string; ellos: string };
+    imperfecto: { yo: string; vos: string; el: string; nosotros: string; vosotros: string; ellos: string };
+    futuro: { yo: string; vos: string; el: string; nosotros: string; vosotros: string; ellos: string };
+    condicional: { yo: string; vos: string; el: string; nosotros: string; vosotros: string; ellos: string };
+  };
   exampleSpanish: string | null;
   isIrregular: boolean | null;
 }
@@ -22,6 +25,26 @@ interface Question {
   type: 'verb';
   originalItem: Verb;
 }
+
+type Tense = 'presente' | 'preterito' | 'imperfecto' | 'futuro' | 'condicional';
+type Subject = 'yo' | 'vos' | 'el' | 'nosotros' | 'vosotros' | 'ellos';
+
+const TENSE_LABELS: Record<Tense, string> = {
+  presente: 'present',
+  preterito: 'preterite',
+  imperfecto: 'imperfect',
+  futuro: 'future',
+  condicional: 'conditional',
+};
+
+const SUBJECT_LABELS: Record<Subject, string> = {
+  yo: 'yo',
+  vos: 'vos',
+  el: 'él/ella/ud.',
+  nosotros: 'nosotros',
+  vosotros: 'vosotros',
+  ellos: 'ellos/uds.',
+};
 
 export default function FillBlankPage() {
   const [verbs, setVerbs] = useState<Verb[]>([]);
@@ -66,45 +89,42 @@ export default function FillBlankPage() {
   const generateVerbQuestion = (verb: Verb): Question | null => {
     if (!verb.exampleSpanish) return null;
 
-    // Randomly choose which conjugation to test
-    const conjugations = [
-      { form: verb.presenteVos, label: 'vos present' },
-      { form: verb.pasadoVos, label: 'vos past' },
-      { form: verb.presenteYo, label: 'yo present' },
-      { form: verb.pasadoYo, label: 'yo past' },
-    ];
-    const randomConjugation = conjugations[Math.floor(Math.random() * conjugations.length)];
+    // Build list of all possible conjugations
+    const allConjugations: Array<{ form: string; tense: Tense; subject: Subject }> = [];
 
-    // Check if the example contains this conjugation
-    if (!verb.exampleSpanish.toLowerCase().includes(randomConjugation.form.toLowerCase())) {
-      // Try another conjugation
-      const alternateConjugation = conjugations.find((c) =>
-        verb.exampleSpanish?.toLowerCase().includes(c.form.toLowerCase())
-      );
-      if (!alternateConjugation) return null;
+    const tenses: Tense[] = ['presente', 'preterito', 'imperfecto', 'futuro', 'condicional'];
+    const subjects: Subject[] = ['yo', 'vos', 'el', 'nosotros', 'vosotros', 'ellos'];
 
-      const sentence = verb.exampleSpanish.replace(
-        new RegExp(alternateConjugation.form, 'gi'),
-        '______'
-      );
-      return {
-        sentence,
-        answer: alternateConjugation.form,
-        hint: `${verb.infinitive} (${alternateConjugation.label})`,
-        type: 'verb',
-        originalItem: verb,
-      };
+    for (const tense of tenses) {
+      for (const subject of subjects) {
+        allConjugations.push({
+          form: verb.conjugations[tense][subject],
+          tense,
+          subject,
+        });
+      }
     }
 
+    // Find conjugations that appear in the example sentence
+    const matchingConjugations = allConjugations.filter((conj) =>
+      verb.exampleSpanish?.toLowerCase().includes(conj.form.toLowerCase())
+    );
+
+    if (matchingConjugations.length === 0) return null;
+
+    // Pick a random matching conjugation
+    const selectedConjugation = matchingConjugations[Math.floor(Math.random() * matchingConjugations.length)];
+
+    // Replace the conjugation with a blank
     const sentence = verb.exampleSpanish.replace(
-      new RegExp(randomConjugation.form, 'gi'),
+      new RegExp(selectedConjugation.form, 'gi'),
       '______'
     );
 
     return {
       sentence,
-      answer: randomConjugation.form,
-      hint: `${verb.infinitive} (${randomConjugation.label})`,
+      answer: selectedConjugation.form,
+      hint: `${verb.infinitive} (${SUBJECT_LABELS[selectedConjugation.subject]} - ${TENSE_LABELS[selectedConjugation.tense]})`,
       type: 'verb',
       originalItem: verb,
     };
@@ -262,10 +282,10 @@ export default function FillBlankPage() {
               <h3 className="font-semibold text-gray-900 mb-3">How it works:</h3>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li>1. Read the Spanish sentence with a blank (______)</li>
-                <li>2. Look at the hint to see which verb and tense to use</li>
+                <li>2. Look at the hint to see which verb, subject, and tense to use</li>
                 <li>3. Type the correct verb conjugation</li>
                 <li>4. Press Enter or click "Check Answer"</li>
-                <li>5. Practice Argentine vos conjugations and get instant feedback!</li>
+                <li>5. Practice all tenses and subjects with instant feedback!</li>
                 <li className="mt-3 text-xs text-gray-600">
                   💡 Tip: Accents don't matter - "tenes" and "tenés" are both accepted
                 </li>
