@@ -2,7 +2,26 @@ import { pgTable, text, integer, timestamp, boolean, pgEnum, serial, jsonb } fro
 
 // Enums
 export const difficultyEnum = pgEnum('difficulty', ['beginner', 'intermediate', 'advanced']);
-export const categoryEnum = pgEnum('category', ['grammar', 'social', 'dating', 'slang', 'directions', 'food_drink', 'emotions', 'other']);
+export const categoryEnum = pgEnum('category', [
+  'grammar',
+  'social',
+  'dating',
+  'slang',
+  'directions',
+  'food_drink',
+  'emotions',
+  'other',
+  'shopping',
+  'restaurant',
+  'health',
+  'transportation',
+  'communication',
+  'time',
+  'greetings',
+  'questions',
+  'weather',
+  'feelings'
+]);
 
 // Users table
 export const users = pgTable('users', {
