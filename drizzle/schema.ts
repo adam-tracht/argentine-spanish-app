@@ -19,8 +19,7 @@ export const categoryEnum = pgEnum('category', [
   'time',
   'greetings',
   'questions',
-  'weather',
-  'feelings'
+  'weather'
 ]);
 
 // Users table
