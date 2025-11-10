@@ -15,6 +15,7 @@ interface Vocabulary {
   category: string;
   difficulty: string;
   tags: string[] | null;
+  isFavorite?: boolean;
 }
 
 export default function FlashcardsPage() {
@@ -34,16 +35,17 @@ export default function FlashcardsPage() {
   const [showSettings, setShowSettings] = useState(true);
   const [sessionStarted, setSessionStarted] = useState(false);
   const [excludeKnown, setExcludeKnown] = useState(true);
+  const [favoritesOnly, setFavoritesOnly] = useState(false);
 
   useEffect(() => {
     fetchVocabulary();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [excludeKnown]);
+  }, [excludeKnown, favoritesOnly]);
 
   const fetchVocabulary = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`/api/vocabulary?excludeKnown=${excludeKnown}`);
+      const response = await fetch(`/api/vocabulary?excludeKnown=${excludeKnown}&favoritesOnly=${favoritesOnly}`);
       const data = await response.json();
       setVocabulary(shuffleArray(data));
       setSessionStats((prev) => ({ ...prev, total: data.length }));
@@ -156,6 +158,33 @@ export default function FlashcardsPage() {
     }
   };
 
+  const handleToggleFavorite = async () => {
+    if (!currentCard) return;
+
+    const newFavoriteStatus = !currentCard.isFavorite;
+
+    try {
+      await fetch('/api/progress', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          vocabId: currentCard.id,
+          isFavorite: newFavoriteStatus,
+        }),
+      });
+
+      // Update the current card's favorite status in state
+      const updatedVocabulary = [...vocabulary];
+      updatedVocabulary[currentIndex] = {
+        ...currentCard,
+        isFavorite: newFavoriteStatus,
+      };
+      setVocabulary(updatedVocabulary);
+    } catch (error) {
+      console.error('Error toggling favorite:', error);
+    }
+  };
+
   const resetSession = () => {
     setCurrentIndex(0);
     setSessionStarted(false);
@@ -253,7 +282,7 @@ export default function FlashcardsPage() {
               </div>
 
               {/* Exclude Known Toggle */}
-              <div className="mb-6 flex items-center">
+              <div className="mb-4 flex items-center">
                 <input
                   type="checkbox"
                   id="excludeKnown"
@@ -263,6 +292,20 @@ export default function FlashcardsPage() {
                 />
                 <label htmlFor="excludeKnown" className="ml-2 text-sm font-medium text-gray-700">
                   Hide cards I've mastered
+                </label>
+              </div>
+
+              {/* Favorites Only Toggle */}
+              <div className="mb-6 flex items-center">
+                <input
+                  type="checkbox"
+                  id="favoritesOnly"
+                  checked={favoritesOnly}
+                  onChange={(e) => setFavoritesOnly(e.target.checked)}
+                  className="w-4 h-4 text-yellow-600 bg-gray-100 border-gray-300 rounded focus:ring-yellow-500"
+                />
+                <label htmlFor="favoritesOnly" className="ml-2 text-sm font-medium text-gray-700">
+                  ⭐ Show only favorites
                 </label>
               </div>
 
@@ -375,6 +418,8 @@ export default function FlashcardsPage() {
               difficulty={currentCard.difficulty}
               tags={currentCard.tags}
               onRate={handleRate}
+              isFavorite={currentCard.isFavorite}
+              onToggleFavorite={handleToggleFavorite}
             />
 
             {/* Mark as Known Button */}

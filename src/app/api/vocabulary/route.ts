@@ -13,6 +13,7 @@ export async function GET(request: Request) {
     const difficulty = searchParams.get('difficulty');
     const tags = searchParams.get('tags')?.split(',');
     const excludeKnown = searchParams.get('excludeKnown') === 'true';
+    const favoritesOnly = searchParams.get('favoritesOnly') === 'true';
 
     let conditions = [];
 
@@ -49,8 +50,8 @@ export async function GET(request: Request) {
       );
     }
 
-    // Filter out known cards if user is logged in and excludeKnown=true
-    if (excludeKnown) {
+    // Filter out known cards or filter for favorites if user is logged in
+    if (excludeKnown || favoritesOnly) {
       const session = await getServerSession(authOptions);
       if (session?.user?.email) {
         // Get user ID
@@ -59,24 +60,51 @@ export async function GET(request: Request) {
         });
 
         if (user) {
-          // Get all known vocab IDs for this user
-          const knownProgress = await db.query.userProgress.findMany({
-            where: and(
-              eq(userProgress.userId, user.id),
-              eq(userProgress.isKnown, true)
-            ),
-            columns: {
-              vocabId: true,
-            },
-          });
+          // Get all known vocab IDs for this user if excluding known
+          if (excludeKnown) {
+            const knownProgress = await db.query.userProgress.findMany({
+              where: and(
+                eq(userProgress.userId, user.id),
+                eq(userProgress.isKnown, true)
+              ),
+              columns: {
+                vocabId: true,
+              },
+            });
 
-          const knownVocabIds = knownProgress
-            .map(p => p.vocabId)
-            .filter(id => id !== null) as number[];
+            const knownVocabIds = knownProgress
+              .map(p => p.vocabId)
+              .filter(id => id !== null) as number[];
 
-          // Filter out known vocabulary
-          if (knownVocabIds.length > 0) {
-            results = results.filter(item => !knownVocabIds.includes(item.id));
+            // Filter out known vocabulary
+            if (knownVocabIds.length > 0) {
+              results = results.filter(item => !knownVocabIds.includes(item.id));
+            }
+          }
+
+          // Get favorite vocab IDs if filtering for favorites only
+          if (favoritesOnly) {
+            const favoriteProgress = await db.query.userProgress.findMany({
+              where: and(
+                eq(userProgress.userId, user.id),
+                eq(userProgress.isFavorite, true)
+              ),
+              columns: {
+                vocabId: true,
+              },
+            });
+
+            const favoriteVocabIds = favoriteProgress
+              .map(p => p.vocabId)
+              .filter(id => id !== null) as number[];
+
+            // Only include favorite vocabulary
+            if (favoriteVocabIds.length > 0) {
+              results = results.filter(item => favoriteVocabIds.includes(item.id));
+            } else {
+              // No favorites found, return empty array
+              results = [];
+            }
           }
         }
       }

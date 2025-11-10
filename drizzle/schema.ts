@@ -101,6 +101,7 @@ export const userProgress = pgTable('user_progress', {
   // Flags
   isKnown: boolean('is_known').default(false),
   isFlagged: boolean('is_flagged').default(false), // user can flag for extra practice
+  isFavorite: boolean('is_favorite').default(false), // user can mark as favorite for review
 
   createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at').defaultNow().notNull(),

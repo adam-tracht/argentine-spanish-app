@@ -82,8 +82,8 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
-    const { vocabId, verbId, isKnown, wasCorrect } = body;
-    console.log('Saving progress for user:', user.email, 'vocabId:', vocabId, 'isKnown:', isKnown);
+    const { vocabId, verbId, isKnown, wasCorrect, isFavorite } = body;
+    console.log('Saving progress for user:', user.email, 'vocabId:', vocabId, 'isKnown:', isKnown, 'isFavorite:', isFavorite);
 
     if (!vocabId && !verbId) {
       return NextResponse.json({ error: 'vocabId or verbId required' }, { status: 400 });
@@ -117,6 +117,10 @@ export async function POST(request: Request) {
 
       if (isKnown !== undefined) {
         updates.isKnown = isKnown;
+      }
+
+      if (isFavorite !== undefined) {
+        updates.isFavorite = isFavorite;
       }
 
       if (wasCorrect !== undefined) {
@@ -154,6 +158,7 @@ export async function POST(request: Request) {
         correctCount: wasCorrect ? 1 : 0,
         incorrectCount: wasCorrect ? 0 : 1,
         isKnown: isKnown || false,
+        isFavorite: isFavorite || false,
       };
 
       if (vocabId) {

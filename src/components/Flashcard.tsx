@@ -10,6 +10,8 @@ interface FlashcardProps {
   difficulty?: string;
   tags?: string[] | null;
   onRate: (rating: 'easy' | 'good' | 'hard' | 'again') => void;
+  isFavorite?: boolean;
+  onToggleFavorite?: () => void;
 }
 
 export default function Flashcard({
@@ -20,6 +22,8 @@ export default function Flashcard({
   difficulty,
   tags,
   onRate,
+  isFavorite = false,
+  onToggleFavorite,
 }: FlashcardProps) {
   const [flipped, setFlipped] = useState(false);
 
@@ -47,6 +51,22 @@ export default function Flashcard({
 
   return (
     <div className="w-full max-w-2xl mx-auto">
+      {/* Favorite Button */}
+      {onToggleFavorite && (
+        <div className="flex justify-end mb-2">
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onToggleFavorite();
+            }}
+            className="text-2xl hover:scale-110 transition-transform"
+            title={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
+          >
+            {isFavorite ? '⭐' : '☆'}
+          </button>
+        </div>
+      )}
+
       {/* Card */}
       <div
         className="relative h-96 cursor-pointer perspective-1000"
